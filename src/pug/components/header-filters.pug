@@ -1,0 +1,101 @@
+.header__bottom
+    .header__search-wrap
+      .header__search
+        span.search-btn
+            svg(width="24" height="24")
+                use(xlink:href="images/sprite.svg#search")
+        input.search-input(type="text", name="search", placeholder="Введите название товара....")
+      .header__search-btn-right Найти
+      .header__search-close
+        svg(width="24px", height="25px")
+          use(xlink:href="images/sprite.svg#header-close")
+
+    .header__filters-wrap
+      .header__filters-logo
+        span.spacer
+        img(src="images/logo/logo.svg", alt="Logo")
+
+        svg.header__filters-close(width="24px", height="24px")
+          use(xlink:href="images/sprite.svg#header-close")
+
+      .header__filters
+        .header__filters-form
+          .header__filters-title Форма
+
+          .header__filters-block
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="57" height="80")
+                    use(xlink:href="images/sprite.svg#form1")
+                span Квадратная
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="80" height="80")
+                    use(xlink:href="images/sprite.svg#form2")
+                span Прямоугольная
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="80" height="80")
+                    use(xlink:href="images/sprite.svg#form3")
+                span 1,5 чаши
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="80" height="80")
+                    use(xlink:href="images/sprite.svg#form4")
+                span 2 чаши
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="58" height="80")
+                    use(xlink:href="images/sprite.svg#form5")
+                span Круглая
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="80" height="80")
+                    use(xlink:href="images/sprite.svg#form6")
+                span Овальная
+            label.filter__item
+                input(type="checkbox", name="form")
+                svg(width="80" height="80")
+                    use(xlink:href="images/sprite.svg#form7")
+                span Угловая
+
+        .header__filters-size
+          .header__filters-title Кухонный блок
+
+          .header__filters-block
+            label.filter__item
+                input(type="checkbox", name="block")
+                span.filter__number 400
+            label.filter__item
+                input(type="checkbox", name="block")
+                span.filter__number 450
+            label.filter__item
+                input(type="checkbox", name="block")
+                span.filter__number 500
+            label.filter__item
+                input(type="checkbox", name="block")
+                span.filter__number 600
+            label.filter__item
+                input(type="checkbox", name="block")
+                span.filter__number 800
+            label.filter__item
+                input(type="checkbox", name="block")
+                span.filter__number 900
+
+        .header__filters-material
+          .header__filters-title Материал
+
+          .header__filters-block
+            label.filter__item
+              input(type="checkbox", name="material")  
+              .filter__item-inner
+                img(src="images/filters/marble.svg")
+                span Кварц
+            label.filter__item
+              input(type="checkbox", name="material")
+              .filter__item-inner
+                img(src="images/filters/quartz.svg")
+                span Мрамор
+
+
+      .header__filters-btn.btn.btn--blue Применить фильтры

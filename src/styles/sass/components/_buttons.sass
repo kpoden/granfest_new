@@ -1,0 +1,43 @@
+.btn
+    cursor: pointer
+    transition: .2s
+    display: inline-flex
+    text-align: center
+    position: relative
+    align-items: center
+    justify-content: center
+    padding: 4px
+    background: var(--c-font)
+    color: #fff
+    font-weight: 400
+    font-size: 20px
+    width: 272px
+    border-radius: 8px
+    height: 50px
+
+    +mw(1150)
+
+    +mw(800)
+        height: 40px
+
+    &:hover
+        background: var(--c-font)
+
+    &:active
+        background: var(--c-font)
+
+
+
+    &.btn--white
+        background: #fff
+        color: var(--c-font) 
+
+        &:hover
+            background: #d8d8d8
+
+    &.btn--blue
+        background: var(--c-font) 
+        color: #fff
+
+        &:hover
+            background: #646297

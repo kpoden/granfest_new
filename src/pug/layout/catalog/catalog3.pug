@@ -1,0 +1,151 @@
+
+.breadcrumbs.wrapper 
+    a(href="../").breadcrumbs__item Главная 
+    span.breadcrumbs__divider /
+    a(href="#").breadcrumbs__item Каталог
+    span.breadcrumbs__divider /
+    a.breadcrumbs__item Аксессуары
+
+
+.catalog.wrapper
+   
+
+    .filters__wrap
+        form.filters
+        
+
+            .filter
+                .filter__title
+                    span Тип товара
+
+                    
+
+                .filter__wrap
+                    label.filter__item
+                        input(type="radio", name="type")
+                        a.filter__vis(href="catalog1.html")
+                            img(src="images/filters/sink.svg")
+                            span Мойки
+                    label.filter__item
+                        input(type="radio", name="type")
+                        a.filter__vis(href="catalog2.html")
+                            img(src="images/filters/faucet.svg")
+                            span Смесители
+                    label.filter__item
+                        input(type="radio", name="type" checked)
+                        a.filter__vis(href="catalog3.html")
+                            img(src="images/filters/soap.svg")
+                            span Аксессуары
+
+            .filter
+                .filter__title
+                    span Цена
+
+
+                .filter__wrap.priceWrap
+                    .filter__priceInputs
+                        .filter__priceInput
+                            span от
+                            input.priceMin(type="text" value="2600") 
+                            span ₽
+                        .filter__priceInput
+                            span до
+                            input.priceMax(type="text" value="265500") 
+                            span ₽
+
+                    .filter__price(data-min="2600", data-max="265500")
+
+
+            
+
+            .filter
+                .filter__title
+                    span Под фильтр
+                    svg.close-filter(width="14" height="14")
+                        use(xlink:href="images/sprite.svg#close-filter")
+                    svg.open-filter(width="14" height="14")
+                        use(xlink:href="images/sprite.svg#arr-d")
+                .filter__wrap
+                    label.filter__item.filter__checkbox
+                        input(type="checkbox", name="material")
+                        .filter__checkbox-square
+                        .filter__checkbox-text
+                            span Дозаторы
+                            sup (411)
+
+                    label.filter__item.filter__checkbox
+                        input(type="checkbox", name="material")
+                        .filter__checkbox-square
+                        .filter__checkbox-text
+                            span Сифоны
+                            sup (325)
+
+                    label.filter__item.filter__checkbox
+                        input(type="checkbox", name="material")
+                        .filter__checkbox-square
+                        .filter__checkbox-text
+                            span Ролл-мат
+                            sup (225)
+
+                    label.filter__item.filter__checkbox
+                        input(type="checkbox", name="material")
+                        .filter__checkbox-square
+                        .filter__checkbox-text
+                            span Коландер
+                            sup (125)
+
+
+
+            .filter__submit
+                .btn.btn--blue Применить фильтры
+
+
+
+    
+    .catalog__wrap
+
+        .catalog__filters
+            .catalog__search
+                span.search-btn
+                    svg(width="24" height="24")
+                        use(xlink:href="images/sprite.svg#search")
+                input.search-input(type="text", name="search", placeholder="Введите название товара....")
+
+            .catalog__sort-wrap
+                .catalog__sort
+                    svg(width="18" height="18")
+                        use(xlink:href="images/sprite.svg#sort")
+
+                    span.curr-sort По популярности
+                    svg.sort-arr-d(width="24" height="24")
+                        use(xlink:href="images/sprite.svg#arr-d")
+
+                .catalog__choose-sorts
+                    span.catalog__choose-sort По популярности
+                    span.catalog__choose-sort Сначала дешевые
+                    span.catalog__choose-sort Сначала дорогие
+                    span.catalog__choose-sort По названию (А-Я)
+
+
+        .catalog__active-filters
+            .active-filter
+                span Классический врезной
+                svg.close-active-filter(width="10" height="10")
+                    use(xlink:href="images/sprite.svg#active-filter-close")
+                    
+            .active-filter
+                span 400
+                svg.close-active-filter(width="10" height="10")
+                    use(xlink:href="images/sprite.svg#active-filter-close")
+
+            
+
+        .catalog__list
+            include ../../components/cards3
+            include ../../components/cards3
+
+
+        include ../../components/pag
+
+
+

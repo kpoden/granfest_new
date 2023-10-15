@@ -1,0 +1,34 @@
+.overlay
+header
+  .header__top
+    a.logo(href='index.html')
+        img(src="images/logo/logo.svg", alt="Logo")
+    nav
+        ul
+          li
+            a(href="catalog1.html") Каталог
+          li
+            a(href="") О компании
+          li
+            a(href="") Акции
+          li
+            a(href="") Новости
+          li
+            a(href="") Контакты
+          li
+            a(href="") Партнерам
+    .personal
+
+        a.personal__icon
+          svg(width="24px", height="25px")
+            use(xlink:href="images/sprite.svg#cart")
+        a.personal__icon
+          svg(width="24px", height="25px")
+            use(xlink:href="images/sprite.svg#heart")
+        a.personal__icon
+          svg(width="24px", height="24px")
+            use(xlink:href="images/sprite.svg#person")
+
+  
+
+  include ../components/header-filters

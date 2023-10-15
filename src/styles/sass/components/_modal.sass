@@ -1,0 +1,322 @@
+.modal 
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 1
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background-color: #00000048
+    z-index: 10000
+    transition: .2s
+    padding: 0 20px
+
+    +mw(800)
+        padding: 0
+
+
+
+
+    &__content 
+        position: relative
+        background-color: #fefefe
+        padding: 0
+        width: fit-content
+        min-width: 320px
+        min-height: 480px
+        margin: 20px auto
+        top: 10%
+        color: #1E2021
+        overflow: hidden
+        border-radius: 24px
+
+        +mw(800)
+            border-radius: 0
+            margin: 0
+            width: 100%
+            height: 100%
+            top: 0
+
+
+
+
+    &.opened 
+        opacity: 1
+        visibility: visible
+
+    &__close-cross
+        position: absolute
+        top: 70px
+        right: 80px
+        cursor: pointer
+        width: 40px
+        height: 40px
+        
+
+        +mw(800)
+            top: 40px
+            right: 20px
+
+        &:hover::after
+            background: var(--c-grey)
+
+        &:hover::before
+            background: var(--c-grey)
+
+        
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 28px
+            height: 2px
+            background: #1A1A1A
+            transform: translate(-50%, -50%) rotate(45deg) 
+            top: 50%
+            left: 50%
+            transition: .2s
+
+            
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 28px
+            height: 2px
+            background: #1A1A1A
+            transform: translate(-50%, -50%) rotate(-45deg) 
+            top: 50%
+            left: 50%
+            transition: .2s
+
+
+
+    &__content-inner
+        padding: 70px 80px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        
+
+        +mw(1000)
+            padding: 50px 60px
+
+        +mw(1000)
+            padding: 50px 20px
+
+    &__header
+        color: var(--c-blue)
+        font-family: HelveticaNeueCyr
+        font-size: 44px
+        font-style: normal
+        font-weight: 400
+        line-height: 100%
+        padding-bottom: 50px
+        
+        +mw(1000)
+            font-size: 32px
+            line-height: 42px
+            padding-bottom: 30px
+
+        +mw(800)
+            font-size: 24px
+            font-weight: 400
+            line-height: 110%
+
+    &__text
+        font-family: HelveticaNeueCyr
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: 120%
+
+        +mw(1000)
+            font-size: 16px
+
+
+    &__btn
+        min-width: 180px
+        text-align: center
+
+        
+        &:hover
+            color: #1E2021
+
+    &__submit-wrap
+        width: 100%
+
+        +mw(800)
+            position: absolute
+            bottom: 45px
+            padding: 0 20px
+
+    &__submit
+        width: 100%
+        padding: 20px 30px
+        border-radius: 8px
+        background: var(--c-blue)
+        color: #FFF
+        font-family: HelveticaNeueCyr
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: 130%
+        letter-spacing: -0.24px
+        height: auto
+        margin-top: 50px
+
+        &:hover
+            background: #7790ff
+            color: #ffffff
+
+        +mw(800)
+            font-size: 16px
+            font-weight: 400
+            line-height: 120%
+            letter-spacing: 0.16px
+
+
+        
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+
+    &__input-wrap
+        width: 100%
+        margin: 0 auto 25px
+        position: relative
+
+        +mw(800)
+            margin: 0 auto 15px
+
+    &__input
+        color: var(--c-font)
+        font-family: HelveticaNeueCyr
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: 130%
+        letter-spacing: -0.24px
+        padding: 20px 30px
+        border-radius: 8px;
+        background:  #F5F5F5
+        width: 100%
+
+        +mw(800)
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: -0.14px
+            padding: 15px
+
+        
+
+        &::placeholder
+            color: rgba(0, 0, 0, 0.60)
+            font-family: HelveticaNeueCyr
+            font-size: 24px
+            font-style: normal
+            font-weight: 400
+            line-height: 130%
+            letter-spacing: -0.24px
+
+            +mw(800)
+                font-size: 14px
+                line-height: 130%
+                letter-spacing: -0.14px
+
+
+    textarea
+        resize: none
+        height: 120px
+
+
+    &__attach
+        
+        margin-right: auto
+        padding-top: 54px
+        cursor: pointer
+        display: flex
+        align-items: center
+        gap: 25px
+
+        +mw(800)
+            padding-top: 30px
+
+
+    &__attach-input
+        position: absolute
+        z-index: -1
+        opacity: 0
+        display: block
+        width: 0
+        height: 0
+
+    &__attach-title 
+        color: var(--c-blue)
+        font-family: HelveticaNeueCyr
+        font-size: 24px
+        font-weight: 400
+        line-height: 120%
+        letter-spacing: 0.24px
+        text-decoration: underline
+
+        +mw(800)
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 120%
+
+
+    &__attach-text
+        font-size: 16px
+        color: var(--c-grey)
+        text-decoration: none
+
+
+
+.callback__modal
+    width: 850px
+
+    +mw(1300)
+        width: 600px
+
+    +mw(800)
+        width: 100%
+        height: 100%
+
+
+.vacancy__modal
+    width: 850px
+
+    +mw(1300)
+        width: 600px
+
+    +mw(800)
+        width: 100%
+        height: 100%
+
+.thanksVakancy__modal
+    .modal__header
+        padding-top: 40px
+        text-align: center
+
+    .modal__text
+        text-align: center
+
+.thanksCallback__modal
+    .modal__header
+        padding-top: 40px
+        text-align: center
+
+    .modal__text
+        text-align: center
+
+
+        

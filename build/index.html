@@ -1,0 +1,351 @@
+<!DOCTYPE html >
+<html lang="ru-RU">
+  <head>
+     <!--metatextblock-->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
+    <link rel="canonical" href=""/>
+    <title>Granfest</title><!--metatextblock-->
+<!--favicon block-->
+<!--/favicon block-->
+<!--assets block-->
+    <link rel="stylesheet" href="libs/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="libs/nouislider.min.css"/>
+    <link rel="stylesheet" href="styles/app.css"/><!--/assets block-->
+  </head>
+  <body>
+    <div class="container main-page">
+      <div class="overlay"></div>
+      <header>
+        <div class="header__top">
+          <div class="burger">
+            <svg width="42" height="42">
+              <use xlink:href="images/sprite.svg#burger"></use>
+            </svg>
+          </div><a class="logo" href="index.html"><img src="images/logo/logo.svg" alt="Logo"/></a>
+          <nav>
+            <ul>
+              <li><a href="catalog1.html">Каталог</a></li>
+              <li><a href="">О компании</a></li>
+              <li><a href="">Акции</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="">Контакты</a></li>
+              <li><a href="">Партнерам</a></li>
+            </ul>
+          </nav>
+          <div class="personal"><a class="personal__icon headerSearchBtn">
+              <svg width="22px" height="22px">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg></a><a class="personal__icon headerCart">
+              <svg width="24px" height="25px">
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg></a><a class="personal__icon headerFav">
+              <svg width="24px" height="25px">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg></a><a class="personal__icon headerLk">
+              <svg width="24px" height="24px">
+                <use xlink:href="images/sprite.svg#person"></use>
+              </svg></a></div>
+        </div>
+        <div class="header-m-search wrapper">
+          <div class="header__search-wrap">
+            <div class="header__search"><span class="search-btn">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg></span>
+              <input class="search-input" type="text" name="search" placeholder="Поиск по товарам"/>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__search-wrap">
+            <div class="header__search"><span class="search-btn">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg></span>
+              <input class="search-input" type="text" name="search" placeholder="Введите название товара...."/>
+            </div>
+            <div class="header__search-btn-right">Найти</div>
+            <div class="header__search-close">
+              <svg width="24px" height="25px">
+                <use xlink:href="images/sprite.svg#header-close"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header__filters-wrap">
+            <div class="header__filters-logo"><span class="spacer"></span><img src="images/logo/logo.svg" alt="Logo"/>
+              <svg class="header__filters-close" width="24px" height="24px">
+                <use xlink:href="images/sprite.svg#header-close"></use>
+              </svg>
+            </div>
+            <div class="header__filters">
+              <div class="header__filters-form">
+                <div class="header__filters-title">Форма</div>
+                <div class="header__filters-block">
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="57" height="80">
+                      <use xlink:href="images/sprite.svg#form1"></use>
+                    </svg><span>Квадратная</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="80" height="80">
+                      <use xlink:href="images/sprite.svg#form2"></use>
+                    </svg><span>Прямоугольная</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="80" height="80">
+                      <use xlink:href="images/sprite.svg#form3"></use>
+                    </svg><span>1,5 чаши</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="80" height="80">
+                      <use xlink:href="images/sprite.svg#form4"></use>
+                    </svg><span>2 чаши</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="58" height="80">
+                      <use xlink:href="images/sprite.svg#form5"></use>
+                    </svg><span>Круглая</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="80" height="80">
+                      <use xlink:href="images/sprite.svg#form6"></use>
+                    </svg><span>Овальная</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="80" height="80">
+                      <use xlink:href="images/sprite.svg#form7"></use>
+                    </svg><span>Угловая</span>
+                  </label>
+                </div>
+              </div>
+              <div class="header__filters-size">
+                <div class="header__filters-title">Кухонный блок</div>
+                <div class="header__filters-block">
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">400</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">450</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">500</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">600</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">800</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">900</span>
+                  </label>
+                </div>
+              </div>
+              <div class="header__filters-material">
+                <div class="header__filters-title">Материал</div>
+                <div class="header__filters-block">
+                  <label class="filter__item">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__item-inner"><img src="images/filters/marble.svg"/><span>Кварц</span></div>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__item-inner"><img src="images/filters/quartz.svg"/><span>Мрамор</span></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="header__filters-btn btn btn--blue">Применить фильтры</div>
+          </div>
+        </div>
+        <div class="mob-menu-fixed">
+          <div class="mmf-inner"><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg><span>Главная</span></a><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#catalog"></use>
+              </svg><span>Каталог</span></a><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg><span>Контакты</span></a><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#person"></use>
+              </svg><span>Авторизация</span></a></div>
+        </div>
+      </header>
+      <main class="main-page">
+        <section class="main-screen" style="background-image: url('images/main-screen/1.png');">
+          <div class="main-screen__info">
+            <div class="wrapper">
+              <h1>GranFest</h1>
+              <h3>Комфорт и функциональность современной кухни</h3><a class="btn btn--white openFilters">Подобрать мойку</a>
+            </div>
+          </div>
+        </section>
+        <section class="main-catalog wrapper">
+          <h2 class="section-title">Каталог товаров</h2>
+          <div class="main-catalog__tiles"><a class="main-catalog__tile" href="catalog1.html"><span>Мойки</span><img src="images/main-catalog/2.png" alt=""/></a><a class="main-catalog__tile" href="catalog2.html"><span>Смесители</span><img src="images/main-catalog/3.png" alt=""/></a><a class="main-catalog__tile" href="catalog3.html"><span>Аксессуары</span><img src="images/main-catalog/4.png" alt=""/></a></div>
+        </section>
+        <section class="main-slider wrapper">
+          <div class="main-slider__inner swiper">
+            <div class="swiper-wrapper">
+              <div class="main-slider__slide swiper-slide m-slide">
+                <div class="m-slide__img"><img src="images/main-catalog/1.png" alt=""/></div>
+                <div class="m-slide__info">
+                  <h3 class="m-slide__title">Распродажа кухонных моек</h3>
+                  <p class="m-slide__subtitle">Более 38 моделей по невероятной цене. Количество ограничено</p>
+                  <div class="btn btn--white">Посмотреть модели</div>
+                </div>
+              </div>
+              <div class="main-slider__slide swiper-slide m-slide">
+                <div class="m-slide__img"><img src="images/main-catalog/1.png" alt=""/></div>
+                <div class="m-slide__info">
+                  <h3 class="m-slide__title">Распродажа кухонных моек</h3>
+                  <p class="m-slide__subtitle">Более 38 моделей по невероятной цене. Количество ограничено</p>
+                  <div class="btn btn--white">Посмотреть модели</div>
+                </div>
+              </div>
+              <div class="main-slider__slide swiper-slide m-slide">
+                <div class="m-slide__img"><img src="images/main-catalog/1.png" alt=""/></div>
+                <div class="m-slide__info">
+                  <h3 class="m-slide__title">Распродажа кухонных моек</h3>
+                  <p class="m-slide__subtitle">Более 38 моделей по невероятной цене. Количество ограничено</p>
+                  <div class="btn btn--white">Посмотреть модели</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="main-blog wrapper"> 
+          <div class="section-title__wrap">
+            <div class="section-title">Блог</div>
+            <div class="section-title__link"><a class="more" href="">
+                    <p>Читать все статьи</p>
+                    <svg width="32" height="32">
+                      <use xlink:href="images/sprite.svg#arr-l"></use>
+                    </svg></a>
+            </div>
+          </div>
+          <div class="main-blog__inner swiper">
+            <div class="swiper-wrapper">
+              <article class="main-blog__item swiper-slide">
+                <div class="main-blog__img"><img src="images/main-blog/1.png" alt=""/></div><span class="main-blog__theme">Мойки</span>
+                <h4 class="main-blog__title">Как правильно установить мойку подстольного монтажа</h4>
+                <p class="main-blog__preview" data-crop="80">Монтаж мойки – это довольно сложная задача, которая обычно требует специальных навыков. Мастер учтет особенности вашей столешницы, предусмотрит возможные риски и установит мойку с соблюдением всех правил.</p><a class="more" href="">
+                      <p>Читать статью</p>
+                      <svg width="32" height="32">
+                        <use xlink:href="images/sprite.svg#arr-l"></use>
+                      </svg></a>
+              </article>
+              <article class="main-blog__item swiper-slide">
+                <div class="main-blog__img"><img src="images/main-blog/2.png" alt=""/></div><span class="main-blog__theme">Советы дизайнеров</span>
+                <h4 class="main-blog__title">Как правильно установить мойку подстольного монтажа</h4>
+                <p class="main-blog__preview" data-crop="80">Чтобы кухня была по-настоящему функциональной, а выполнение кулинарных задач приносило только удовольствие, при организации пространства важно тщательно продумать все тонкости.</p><a class="more" href="">
+                      <p>Читать статью</p>
+                      <svg width="32" height="32">
+                        <use xlink:href="images/sprite.svg#arr-l"></use>
+                      </svg></a>
+              </article>
+              <article class="main-blog__item swiper-slide">
+                <div class="main-blog__img"><img src="images/main-blog/3.png" alt=""/></div><span class="main-blog__theme">Какую мойку выбирать</span>
+                <h4 class="main-blog__title">Как правильно установить мойку подстольного монтажа</h4>
+                <p class="main-blog__preview" data-crop="80">Мойка является настоящим сердцем кухни. Если вы подобрали мойку правильно, она сможет обеспечить комфорт при выполнении кухонных задач и даже сэкономить ваше время</p><a class="more" href="">
+                      <p>Читать статью</p>
+                      <svg width="32" height="32">
+                        <use xlink:href="images/sprite.svg#arr-l"></use>
+                      </svg></a>
+              </article>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner wrapper">
+          <div class="footer__cols">
+            <div class="footer__col footer__contacts">
+              <div class="footer__title"><img src="images/footer/logo-w.svg" alt="Logo"/></div>
+              <div class="footer__item"><span class="footer__item-icon">
+                  <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#tel-w"></use>
+                  </svg></span><span class="footer__item-text"><a href="tel:+7 (800) 101-81-45">+7 (800) 101-81-45 (опт)</a><a href="tel:+7 (926) 907-79-84">+7 (926) 907-79-84 (розница)</a></span></div>
+              <div class="footer__item"><span class="footer__item-icon">
+                  <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#mail-w"></use>
+                  </svg></span><span class="footer__item-text"> <a href="mailto:info@granfest.net">info@granfest.net</a></span></div>
+              <div class="footer__item"><span class="footer__item-icon">
+                  <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#mapdot-w"></use>
+                  </svg></span><span class="footer__item-text"> <a href="">Москва, м. Площадь Ильича Золоторожский Вал, 8</a></span></div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__title">Каталог</div><a class="footer__item" href="">Мойки</a><a class="footer__item" href="">Смесители</a><a class="footer__item" href="">Аксессуары</a><a class="footer__item" href="">Скачать каталог</a>
+            </div>
+            <div class="footer__col">
+              <div class="footer__title">О компании</div><a class="footer__item" href="">Новости</a><a class="footer__item" href="">Блог</a><a class="footer__item" href="">Сертификаты</a><a class="footer__item" href="">Политика компании</a><a class="footer__item" href="">Контакты</a>
+            </div>
+            <div class="footer__col spacer"></div>
+            <div class="footer__col">
+              <div class="footer__title">Покупателям</div><a class="footer__item" href="">Акции</a><a class="footer__item" href="">Интернет-магазин</a><a class="footer__item" href="">Сервис</a><a class="footer__item" href="">Полезная информация</a>
+            </div>
+            <div class="footer__col">
+              <div class="footer__title">Партнерам</div><a class="footer__item" href="">Стать партнером</a><a class="footer__item" href="">Дилерская сеть</a>
+            </div>
+          </div>
+          <div class="footer__soc">
+            <div class="footer__icons"><a href="" target="_blank">
+                <svg width="28" height="28">
+                  <use xlink:href="images/sprite.svg#tg"></use>
+                </svg></a><a href="" target="_blank">
+                <svg width="28" height="28">
+                  <use xlink:href="images/sprite.svg#vk"></use>
+                </svg></a><a href="" target="_blank">
+                <svg width="28" height="28">
+                  <use xlink:href="images/sprite.svg#yt"></use>
+                </svg></a><a href="" target="_blank">
+                <svg width="28" height="28">
+                  <use xlink:href="images/sprite.svg#dzen"></use>
+                </svg></a><a href="" target="_blank">
+                <svg width="28" height="28">
+                  <use xlink:href="images/sprite.svg#mailru"></use>
+                </svg></a></div>
+            <div class="footer__subscribe">
+              <form id="subscribe">
+                <input type="text" name="email" placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ"/><span class="footer__subscribe-btn">
+                  <svg width="30" height="30">
+                    <use xlink:href="images/sprite.svg#arr-thin"></use>
+                  </svg></span>
+              </form>
+            </div>
+          </div>
+          <div class="footer__bottom">2023 © GranFest Все права защищены.</div>
+        </div>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+      <script src="libs/swiper-bundle.min.js"></script>
+      <script src="libs/nouislider.min.js"></script>
+      <script src="libs/fslightbox.js"></script>
+      <script src="scripts/main.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+.breadcrumbs.wrapper 
+    a(href="../").breadcrumbs__item Главная 
+    span.breadcrumbs__divider /
+    a(href="catalog1.html").breadcrumbs__item Каталог
+    span.breadcrumbs__divider /
+    a.breadcrumbs__item Мойка LEVEL 760K
+
+.item
+    .item__main.wrapper
+
+        .item__images
+            .item__slider-nav-wrap
+                .nav-slider-next.nav-slider-arr.hidden
+                    svg.sort-arr-d(width="24" height="24")
+                        use(xlink:href="images/sprite.svg#arr-d")
+                .nav-slider-prev.nav-slider-arr.hidden
+                    svg.sort-arr-d(width="24" height="24")
+                        use(xlink:href="images/sprite.svg#arr-d")
+                .item__slider-nav.swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="images/item/1.png")
+                        .swiper-slide
+                            img(src="images/item/2.png")
+                        .swiper-slide
+                            img(src="images/item/3.png")
+
+
+      
+
+            .item__slider-main.swiper
+                .swiper-wrapper
+                    a.swiper-slide(data-fslightbox="gallery" href="images/item/1.png")
+                        img(src="images/item/1.png")
+                    a.swiper-slide(data-fslightbox="gallery" href="images/item/2.png")
+                        img(src="images/item/2.png")
+                    a.swiper-slide(data-fslightbox="gallery" href="images/item/3.png")
+                        img(src="images/item/3.png")
+
+
+
+        .item__info
+
+            .item__art Артикул: LV-760K черный
+
+            h1.item__name Мойка LEVEL 760K
+
+            .item__chars
+
+                .item__char
+                    .item__char-name Цвет 
+                    
+                    .item__char-value Черный
+                .item__char
+                    .item__char-name Материал
+
+                    .item__char-value Мрамор
+                .item__char
+                    .item__char-name Кухонный блок
+
+                    .item__char-value 800 мм
+                .item__char
+                    .item__char-name Общий размер
+
+                    .item__char-value 760 х 500 мм
+
+            a.item__linktodescr(class="desc-link") Все характеристики
+
+            .item__priceblock
+
+                a.addToCart.btn.btn--blue Добавить в корзину
+
+                .item__price 9 188,50
+                    span ₽
+
+                .item__oldprice 10 810 ₽
+
+            .item__colors-title Выбрать цвет:
+
+            .item__colors
+
+                a.item__color.colorFilter(data-color="Серый" href="#")
+                    img(src="images/item/colors/1.png")
+                a.item__color.colorFilter(data-color="Бежевый" href="#")
+                    img(src="images/item/colors/2.png")
+                a.item__color.colorFilter(data-color="Черный" href="#")
+                    img(src="images/item/colors/3.png")
+                a.item__color.colorFilter(data-color="Коричневый" href="#")
+                    img(src="images/item/colors/4.png")
+                a.item__color.colorFilter(data-color="Кремовый" href="#")
+                    img(src="images/item/colors/5.png")
+
+
+    include ../components/recommended.pug
+    
+
+    .item__desc.wrapper
+        .item__tabs
+            .item__tab.activeTab(data-tab="Описание") Описание
+            .item__tab(data-tab="Характеристики") Характеристики
+            .item__tab(data-tab="Полезная информация") Полезная информация
+
+        .item__desc-blocks
+
+            .item__desc-block.activeBlock(data-tab="Описание")
+                .item__desc-text
+                    p Мойка для кухни GranFest GF-LV-760K отказ от лишних деталей в пользу функциональности. Кухонная мойка оснащена 2-мя чашами. Вы можете выполнять несколько задач одновременно, мыть посуду, обрабатывать и сушить овощи, размораживать продукты. Мойки для кухни GranFest сочетают в себе высокое качество и прекрасные потребительские характеристики:
+                    p • ударопрочность; 
+                    p • устойчивость к царапинам; 
+                    p • отсутствие пористости; 
+                    p • устойчивость к воздействию высоких температур (мойки выдерживают перепады температур от -50 до +180 °C); 
+                    p • антибактериальные свойства (на поверхности мойки не размножаются бактерии); 
+                    p • гидрофобность; 
+                    p • защиту от воздействия красящих веществ.
+
+            .item__desc-block(data-tab="Характеристики")
+                .item__desc-chars
+                    .item__desc-char
+                        .item__desc-char-name Форма
+                        .item__desc-char-value Прямоугольная
+                    .item__desc-char
+                        .item__desc-char-name Крыло
+                        .item__desc-char-value Нет
+                    .item__desc-char
+                        .item__desc-char-name Кухонный блок
+                        .item__desc-char-value 800 мм
+                    .item__desc-char
+                        .item__desc-char-name Отверстие под смеситель
+                        .item__desc-char-value Нет
+                    
+                    .item__desc-char
+                        .item__desc-char-name Материал
+                        .item__desc-char-value Мрамор
+                    .item__desc-char
+                        .item__desc-char-name Способ монтажа
+                        .item__desc-char-value Классический врезной
+                    .item__desc-char
+                        .item__desc-char-name Цвет
+                        .item__desc-char-value Черный
+                    .item__desc-char
+                        .item__desc-char-name Гарантия
+                        .item__desc-char-value 2 года
+                    
+                    .item__desc-char
+                        .item__desc-char-name Общий размер
+                        .item__desc-char-value 760 х 500 мм
+                    .item__desc-char
+                        .item__desc-char-name Габариты упаковки
+                        .item__desc-char-value 906 х 530 х 250 мм
+                    .item__desc-char
+                        .item__desc-char-name Количество чаш
+                        .item__desc-char-value 2
+                    .item__desc-char
+                        .item__desc-char-name Масса без упаковки
+                        .item__desc-char-value 19,4 кг
+                    
+                    .item__desc-char
+                        .item__desc-char-name Размер чаши
+                        .item__desc-char-value 450 х 440 х 200 мм
+                    .item__desc-char
+                        .item__desc-char-name Масса в упаковке
+                        .item__desc-char-value 23,3 кг
+                    .item__desc-char
+                        .item__desc-char-name Размер чаши 2
+                        .item__desc-char-value 450 х 440 х 200 мм
+                    .item__desc-char
+                        .item__desc-char-name Комплектация
+                        .item__desc-char-value Сливная арматура
+                    
+
+            .item__desc-block(data-tab="Полезная информация")
+                .item__desc-useful 
+                    .item__desc-useful-item
+                        .item__desc-useful-img
+                            img(src="images/item/useful/1.png")
+                        a.item__desc-useful-download
+                            svg(width="24" height="24")
+                                use(xlink:href="images/sprite.svg#download")
+                            span Скачать технический паспорт
+                    .item__desc-useful-item
+                        .item__desc-useful-img
+                            img(src="images/item/useful/2.png")
+                        a.item__desc-useful-download
+                            svg(width="24" height="24")
+                                use(xlink:href="images/sprite.svg#download")
+                            span Скачать схему установки
+                    .item__desc-useful-item
+                        .item__desc-useful-img
+                            img(src="images/item/useful/3.png")
+                        a.item__desc-useful-download
+                            svg(width="24" height="24")
+                                use(xlink:href="images/sprite.svg#download")
+                            span Скачать размеры монтажного проема
+
+
+    include ../components/related.pug

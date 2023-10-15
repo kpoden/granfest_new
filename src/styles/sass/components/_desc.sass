@@ -1,0 +1,107 @@
+.item
+
+    &__desc
+        padding: 100px
+
+    &__tabs
+        display: flex
+        gap: 30px
+        padding-bottom: 30px
+
+    &__tab
+        display: flex
+        padding: 15px 20px
+        justify-content: center
+        align-items: center
+        color: #777
+        font-size: 26px
+        font-weight: 400
+        cursor: pointer
+        transition: .2s
+        border-bottom: 2px solid transparent
+
+        &:hover
+            color: #40678dcb
+
+        &.activeTab
+            border-radius: 4px 4px 0 0
+            border-bottom: 2px solid var(--c-font)
+            background: #F5F5F5
+            color: var(--c-font)
+
+    &__desc-blocks
+        position: relative
+
+    &__desc-block
+        position: relative
+        display: none
+
+        &.activeBlock
+            display: block !important
+
+    &__desc-text
+        color: #000
+        font-size: 18px
+        font-weight: 400
+        line-height: 150%
+
+    &__desc-chars
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 80px
+
+    &__desc-char
+        display: flex
+        justify-content: space-between
+        padding: 20px 0
+        font-size: 18px
+        line-height: 150%
+        border-bottom: 2px solid  #F5F5F5
+
+        &-name
+            flex: 1
+            color: #777777
+
+        &-value
+            flex: 1
+            color: #1F1F1F
+
+    &__desc-useful
+        display: flex
+        gap: 30px
+
+        &-item
+            max-width: 390px
+
+        &-img
+            position: relative
+            width: 390px
+            height: 390px
+            margin-bottom: 20px
+
+            img
+                position: absolute
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        &-download
+            display: flex
+            align-items: center
+            gap: 15px
+
+            span
+                transition: .2s
+
+            &:hover span
+                color: #6c7bad
+
+            &:hover svg
+                color: #6c7bad
+
+                    
+
+            span
+                color: var(--c-font)
+                font-size: 16px
+                font-weight: 400
