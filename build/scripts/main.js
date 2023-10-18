@@ -585,7 +585,7 @@ class MobMenu {
 
     this.mob = document.querySelector('.mob-menu');
     this.burger = document.querySelector('.burger');
-    this.closeBtn = document.querySelector('.close-mobTitle');
+    this.closeBtn = document.querySelector('.close-mobMenu');
     this.sectionNames = document.querySelectorAll('.mob-menu__section-name');
     this.container = document.querySelector('.container');
 
