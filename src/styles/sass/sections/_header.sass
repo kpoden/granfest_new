@@ -321,6 +321,16 @@ header
             .header__filters-btn
                 width: 300px
 
+                &.desk
+                    +mw(800)
+                        display: none
+                &.mob
+                    display: none
+                    +mw(800)
+                        display: flex
+
+  
+
                 +mw(600)
                     width: 100%
                     font-size: 16px
@@ -403,12 +413,18 @@ header
         display: none
         +mw(800)
             display: block
+
+    .mobBack
+        display: none
+
+        +mw(800)
+            display: block
   
     .header-m-search
         display: none
         +mw(800)
             display: block
-        .header__search-wrap
+        .header-m__search-wrap
             border-top: 0.5px solid  #BBB
             padding-bottom: 20px
             padding-top: 10px
