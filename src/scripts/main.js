@@ -109,9 +109,16 @@ function itemMainSlidersInit() {
       loop: false,
       centeredSlides: false,
       slideToClickedSlide: true,
-      direction: 'vertical',
-
+      direction: 'horizontal',
+      breakpoints: {
+        800: {
+          direction: 'vertical',
+        }
+      }
     });
+    
+
+    
 
     const arrPrev = document.querySelector('.nav-slider-prev');
     const arrNext = document.querySelector('.nav-slider-next');
@@ -152,14 +159,22 @@ itemMainSlidersInit()
 function additionalSlidersInit() {
   if(document.querySelector('.recommended')) {
     const recommendedSlider = new Swiper('.recommended .swiper', {
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       slideToClickedSlide: false,
       spaceBetween: 30,
       loop: true,
       autoplay: {
         delay: 3000,
       },
-      speed: 500
+      speed: 500,
+      breakpoints: {
+        800: {
+          slidesPerView: 4,
+        },
+        600: {
+          slidesPerView: 2,
+        },
+      }
     });
 
     const arrPrev = document.querySelector('.recommended .arr-l');
@@ -175,14 +190,22 @@ function additionalSlidersInit() {
   }
   if(document.querySelector('.related')) {
     const recommendedSlider = new Swiper('.related .swiper', {
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       slideToClickedSlide: false,
       spaceBetween: 30,
       loop: true,
       autoplay: {
         delay: 3000,
       },
-      speed: 500
+      speed: 500,
+      breakpoints: {
+        800: {
+          slidesPerView: 4,
+        },
+        600: {
+          slidesPerView: 2,
+        },
+      }
     });
 
     const arrPrev = document.querySelector('.related .arr-l');
@@ -410,14 +433,16 @@ initColorTooltip()
 
 
 function priceRange() {
-  const priceRange = document.querySelector('.filter__price');
+  const priceRange = document.querySelectorAll('.filter__price');
 
-  if(priceRange) {
+  priceRange.forEach(el=> {
 
-      const minPrice = parseInt(priceRange.dataset.min);
-      const maxPrice = parseInt(priceRange.dataset.max);
+  
 
-      noUiSlider.create(priceRange, {
+      const minPrice = parseInt(el.dataset.min);
+      const maxPrice = parseInt(el.dataset.max);
+
+      noUiSlider.create(el, {
           start: [minPrice, maxPrice],
           connect: true,
           range: {
@@ -433,16 +458,14 @@ function priceRange() {
       document.querySelector('.priceMax')
     ];
 
-    priceRange.noUiSlider.on('update', function (values, handle) {
+    el.noUiSlider.on('update', function (values, handle) {
       const roundedValue = Math.round(values[handle]);
       snapValues[handle].value = roundedValue;
     });
-  }
-
-
-
+  })
 
 }
+
 priceRange()
 
 function blogSliderInit() {
@@ -466,6 +489,154 @@ function blogSliderInit() {
   }
 }
 blogSliderInit()
+
+
+function mobSpoilers() {
+
+  const mobBlocks = document.querySelectorAll('.item__desc-block');
+
+  mobBlocks.forEach(el=> {
+
+    el.style.display = "block";
+    const blockHeight = el.getBoundingClientRect().height;
+    el.style.display = "";
+
+    const spoilerOpen = el.querySelector('.item__desc-spoiler.open');
+    spoilerOpen.classList.add('hidden');
+    const spoilerClose = el.querySelector('.item__desc-spoiler.close');
+    spoilerClose.classList.add('hidden');
+
+    if(blockHeight > 300) {
+      el.style.height = "300px"
+      spoilerOpen.classList.remove('hidden');
+    }
+
+
+
+
+    spoilerOpen.addEventListener('click', () => {
+      el.style.height = "auto";
+      spoilerClose.classList.remove('hidden');
+      spoilerOpen.classList.add('hidden');
+    })
+    
+    
+    spoilerClose.addEventListener('click', () => {
+      el.style.height = "300px";
+      spoilerClose.classList.add('hidden');
+      spoilerOpen.classList.remove('hidden');
+    })
+
+  })
+
+}
+
+mobSpoilers()
+
+
+class MobFilters {
+  constructor() {
+    this.filterOpen = document.querySelector('.mobFilter');
+    this.filterClose = document.querySelector('.close-mobTitle');
+    this.filtersBlock = document.querySelector('.catalog .filters__wrap');
+    this.catalogBlock = document.querySelector('.catalog .catalog__wrap');
+
+    this.init();
+
+  }
+
+  listen() {
+    this.filterOpen.addEventListener('click', () => {
+      this.open();
+    })
+
+    this.filterClose.addEventListener('click', () => {
+      this.close();
+    })
+  }
+
+  open() {
+    this.filtersBlock.classList.add('block');
+    this.catalogBlock.classList.add('hidden');
+  }
+
+  close() {
+    this.filtersBlock.classList.remove('block');
+    this.catalogBlock.classList.remove('hidden');
+  }
+
+  init() {
+
+    this.listen();
+  }
+}
+
+if(document.querySelector('.mobFilter')) {
+  const mobFilters = new MobFilters;
+}
+
+
+
+
+
+
+class MobMenu {
+  constructor() {
+
+    this.mob = document.querySelector('.mob-menu');
+    this.burger = document.querySelector('.burger');
+    this.closeBtn = document.querySelector('.close-mobTitle');
+    this.sectionNames = document.querySelectorAll('.mob-menu__section-name');
+    this.container = document.querySelector('.container');
+
+    this.init();
+  }
+
+  listenSections() {
+    this.sectionNames.forEach(el=>{
+      el.addEventListener('click', () => {
+        if(el.classList.contains('expanded-section')) {
+          el.classList.remove('expanded-section')
+        } else {
+          el.classList.add('expanded-section')
+        }
+        
+      })
+    })
+  }
+
+  listen() {
+    this.burger.addEventListener('click', ()=>{
+      this.open();
+    })
+
+    this.closeBtn.addEventListener('click', ()=>{
+      this.close();
+    })
+  }
+
+
+  open() {
+    this.mob.classList.add('opened');
+    this.container.classList.add('hidden');
+
+  }
+
+  close() {
+    this.mob.classList.remove('opened');
+    this.container.classList.remove('hidden');
+  }
+
+
+
+  init() {
+    this.listen();
+    this.listenSections();
+  }
+}
+
+const mobMenu = new MobMenu;
+
 
 
 });

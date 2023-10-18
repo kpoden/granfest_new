@@ -6,12 +6,12 @@
     gap: 25px
     border-radius: 18px
     background:  #F5F5F5
-    width: 285px
+    // width: 285px
 
 
     &__img
         height: 180px
-        width: 245px
+        width: 100%
 
         img
             width: 100%
@@ -39,6 +39,7 @@
 
     &__colors
         display: flex
+        flex-wrap: wrap
         gap: 10px
 
         span
@@ -46,6 +47,10 @@
             width: 10px
             height: 10px
             border-radius: 2px
+
+            +mw(800)
+                width: 24px
+                height: 24px
 
     &__chars
         color:  rgba(0, 0, 0, 0.70)

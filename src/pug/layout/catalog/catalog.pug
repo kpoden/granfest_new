@@ -4,13 +4,40 @@
     span.breadcrumbs__divider /
     a(href="#").breadcrumbs__item Каталог
     span.breadcrumbs__divider /
-    a.breadcrumbs__item Смесители
+    a.breadcrumbs__item Мойки
 
 
-.catalog.wrapper
+.catalog-mob.wrapper
     
+
+    .filter__wrap
+        a.filter__item(href="catalog1.html")
+            .filter__vis
+                img(src="images/filters/sink.svg")
+                span Мойки
+
+            svg(width="22" height="22")
+                use(xlink:href="images/sprite.svg#arr-bold-r")
+        a.filter__item(href="catalog2.html")
+            .filter__vis
+                img(src="images/filters/faucet.svg")
+                span Смесители
+
+            svg(width="22" height="22")
+                use(xlink:href="images/sprite.svg#arr-bold-r")
+        a.filter__item(href="catalog3.html")
+            .filter__vis
+                img(src="images/filters/soap.svg")
+                span Аксессуары
+
+            svg(width="22" height="22")
+                use(xlink:href="images/sprite.svg#arr-bold-r")
+
+
+.catalog.wrapper.deskCatalog
    
-    include ../../components/filters2
+
+    include ../../components/filters1
     
     .catalog__wrap
         include ../../components/filtersMob
@@ -52,9 +79,9 @@
             
 
         .catalog__list
-            include ../../components/cards2
-            include ../../components/cards2
- 
+            include ../../components/cards1
+            include ../../components/cards1
+
         include ../../components/pag
 
 

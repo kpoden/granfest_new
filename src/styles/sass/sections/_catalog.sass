@@ -2,11 +2,28 @@
     padding-top: 40px
     display: grid;
     grid-template-columns: auto auto
-    grid-column-gap: 30px;
+    grid-column-gap: 30px
 
+    +mw(1000)
+        grid-column-gap: 10px
+
+    +mw(800)
+        padding-top: 10px
+
+    +mw(500)
+        grid-template-columns: auto
 
     .filters__wrap
         height: 100%
+        background: #fff
+
+        +mw(800)
+            position: absolute
+            top: 0
+            left: 20px
+            z-index: 100
+            display: none
+
 
     .filters
         display: flex
@@ -18,12 +35,22 @@
         position: sticky
         border-right: 1px solid  #BBB
 
+        +mw(800)
+            max-width: none
+            width: calc(100% - 20px)
+            border-right: none
+            position: unset
+            padding-bottom: 150px
+
 
         .close-filter
             cursor: pointer
             color: #0C0C0C
             transition: .2s
             margin-right: 28px
+
+            +mw(800)
+                display: none
 
             &:hover
                 color: #bbb
@@ -55,6 +82,9 @@
                     font-family: Inter
                     font-size: 18px
                     font-weight: 600
+
+                    +mw(800)
+                        font-size: 22px
                     
 
             &__wrap
@@ -220,6 +250,14 @@
         grid-column-gap: 34px
         grid-row-gap: 34px
 
+        +mw(1400)
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 20px
+
+        +mw(500)
+            grid-template-columns: repeat(1, 1fr)
+            grid-column-gap: 0px
+
     &__filters
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -229,9 +267,18 @@
         width: 100%
         padding-bottom: 20px
 
+        +mw(1100)
+            grid-template-columns: 1fr
+            grid-template-rows: 2fr
+            grid-column-gap: 0px
+
+        +mw(800)
+            display: none
+
     &__search
         grid-area: 1 / 1 / 2 / 3
         position: relative
+        
         
 
         
@@ -268,6 +315,7 @@
 
     &__sort-wrap
         position: relative
+        min-width: 260px
         
         &.openedSorts
             .catalog__choose-sorts
@@ -340,6 +388,9 @@
         gap: 15px
         justify-content: flex-start
 
+        +mw(800)
+            display: none
+
 
         .active-filter
             display: flex
@@ -404,6 +455,11 @@
             border-radius: 8px
             background:  #F5F5F5
 
+            +mw(800)
+                width: 160px
+            +mw(600)
+                width: 100%
+
             span
                 color:  #BBB
                 font-size: 20px
@@ -447,4 +503,129 @@
     .noUi-handle::before
         display: none
             
+.filter__submit
+    .btn
+        +mw(800)
+            width: 100%
+.catalog-mob
 
+    .filter__wrap
+        display: flex
+        flex-direction: column
+        gap: 15px
+
+    .filter__item
+        display: inline-flex
+        align-items: center
+        padding-bottom: 15px
+        border-bottom: 1px solid  #BBB
+        justify-content: space-between
+
+    span
+        transition: .2s
+        &:hover
+            color: #3a3a3a
+
+    .filter__vis
+        display: inline-flex
+        align-items: center
+        gap: 10px
+        color: #0C0C0C
+        font-size: 22px
+
+
+.deskCatalog
+    +mw(800)
+        display: none
+
+.catalog-mob
+    display: none
+
+    +mw(800)
+        display: block !important
+
+.deskTypeOfProduct
+    +mw(800)
+        display: none !important
+
+
+.deskPrice
+    +mw(800)
+        display: none !important    
+.mobPrice
+    display: none !important
+
+    +mw(800)
+        display: block !important
+
+.filter-mobTitle 
+    justify-content: space-between
+    align-items: center
+    padding: 20px 0 10px
+    border-bottom: 0.5px solid var(--unnamed, #BBB)
+    display: none
+
+    +mw(800)
+        display: flex
+
+    span
+        font-size: 24px
+        color: var(--c-font)
+
+.close-mobTitle
+    cursor: pointer
+
+
+.mob-filters-line 
+    align-items: center
+    justify-content: space-between
+    padding-bottom: 20px
+    display: none
+
+    +mw(800)
+        display: flex
+
+    .mob-filter
+        display: inline-flex
+        align-items: center
+        gap: 10px
+        cursor: pointer
+        transition: .2s
+
+        &:hover
+            color: #6c7bad
+
+        &:active
+            color: #3d5294
+
+.mob-filters-line 
+    .mob-filter
+        .catalog__sort
+            height: 50px
+            padding: 10px 30px 0 0
+            justify-content: space-between
+            align-items: center
+            border-radius: 8px
+            border: none !important
+            background: #FFF
+            cursor: pointer
+            z-index: 10
+            position: relative
+            gap: 10px
+            transition: .2s
+
+            &:hover .curr-sort
+                color: #6c7bad
+
+            &:active .curr-sort
+                color: #3d5294
+
+        .curr-sort
+            color: var(--c-font)
+            font-size: 16px
+
+        .catalog__choose-sorts
+            z-index: 12 !important
+            padding: 0 !important
+
+            

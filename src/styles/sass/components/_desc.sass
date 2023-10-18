@@ -3,10 +3,21 @@
     &__desc
         padding: 100px
 
+        +mw(1100)
+            padding: 60px 50px
+
+        +mw(800)
+            padding: 60px 20px
+
     &__tabs
         display: flex
         gap: 30px
-        padding-bottom: 30px
+        margin-bottom: 30px
+
+        +mw(800)
+            overflow-x: auto
+
+
 
     &__tab
         display: flex
@@ -19,6 +30,13 @@
         cursor: pointer
         transition: .2s
         border-bottom: 2px solid transparent
+
+        +mw(1200)
+            font-size: 16px
+
+        +mw(800)
+            padding: 10px 15px
+
 
         &:hover
             color: #40678dcb
@@ -34,7 +52,9 @@
 
     &__desc-block
         position: relative
+        overflow: hidden
         display: none
+        padding-bottom: 35px
 
         &.activeBlock
             display: block !important
@@ -45,10 +65,18 @@
         font-weight: 400
         line-height: 150%
 
+        +mw(800)
+            font-size: 14px; 
+
     &__desc-chars
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-column-gap: 80px
+        overflow: hidden
+
+        +mw(800)
+            grid-template-columns: repeat(1, 1fr)
+            grid-column-gap: 0px
 
     &__desc-char
         display: flex
@@ -67,17 +95,36 @@
             color: #1F1F1F
 
     &__desc-useful
-        display: flex
-        gap: 30px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 30px
+        grid-row-gap: 30px
+
+        +mw(800)
+            flex-direction: column
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 20px
+            grid-row-gap: 20px
+
+        +mw(500)
+            grid-template-columns: repeat(1, 1fr)
 
         &-item
             max-width: 390px
 
+            +mw(800)
+                width: 100%
+                max-width: none
+
         &-img
             position: relative
-            width: 390px
             height: 390px
             margin-bottom: 20px
+
+            +mw(1000)
+                height: 250px
+
+
 
             img
                 position: absolute
@@ -105,3 +152,27 @@
                 color: var(--c-font)
                 font-size: 16px
                 font-weight: 400
+
+    &__desc-spoiler
+        font-size: 18px
+        line-height: 130%
+        text-decoration-line: underline
+        position: absolute
+        bottom: 0
+        z-index: 100
+        cursor: pointer
+        transition: .2s
+        background: #ffffff
+        width: 100%
+        display: inline-flex
+        align-items: flex-end
+
+        &.close
+            height: 25px
+
+        &.open
+            height: 50px
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
+
+        &:hover
+            color: #6c7bad

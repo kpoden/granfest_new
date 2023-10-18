@@ -1,6 +1,13 @@
 .overlay
 header
+  
   .header__top
+    .burger.hidden
+      svg(width="42" height="42")
+        use(xlink:href="images/sprite.svg#burger")
+    a.mobBack(href="catalog.html")
+      svg(width="42" height="42")
+        use(xlink:href="images/sprite.svg#arr-bold-l")
     a.logo(href='index.html')
         img(src="images/logo/logo.svg", alt="Logo")
     nav
@@ -18,17 +25,31 @@ header
           li
             a(href="") Партнерам
     .personal
-
-        a.personal__icon
+        a.personal__icon.headerSearchBtn
+          svg(width="22px", height="22px")
+            use(xlink:href="images/sprite.svg#search")
+        a.personal__icon.headerCart
           svg(width="24px", height="25px")
             use(xlink:href="images/sprite.svg#cart")
-        a.personal__icon
+        a.personal__icon.headerFav
           svg(width="24px", height="25px")
             use(xlink:href="images/sprite.svg#heart")
-        a.personal__icon
+        a.personal__icon.headerLk
           svg(width="24px", height="24px")
             use(xlink:href="images/sprite.svg#person")
+        //- a.personal__icon.headerCartMob
+        //-   svg(width="32px", height="32px")
+        //-     use(xlink:href="images/sprite.svg#cart")
 
-  
+  .header-m-search.wrapper
+    .header__search-wrap
+      .header__search
+        span.search-btn
+            svg(width="24" height="24")
+                use(xlink:href="images/sprite.svg#search")
+        input.search-input(type="text", name="search", placeholder="Поиск по товарам")
+
 
   include ../components/header-filters
+
+  include ../components/mob-menu-fixed

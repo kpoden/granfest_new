@@ -26,14 +26,11 @@
       <div class="overlay"></div>
       <header>
         <div class="header__top">
-          <div class="burger hidden">
+          <div class="burger">
             <svg width="42" height="42">
               <use xlink:href="images/sprite.svg#burger"></use>
             </svg>
-          </div><a class="mobBack" href="catalog.html">
-            <svg width="42" height="42">
-              <use xlink:href="images/sprite.svg#arr-bold-l"></use>
-            </svg></a><a class="logo" href="index.html"><img src="images/logo/logo.svg" alt="Logo"/></a>
+          </div><a class="logo" href="index.html"><img src="images/logo/logo.svg" alt="Logo"/></a>
           <nav>
             <ul>
               <li><a href="catalog1.html">Каталог</a></li>
@@ -194,8 +191,23 @@
         </div>
       </header>
       <main class="main-page">
-        <div class="breadcrumbs wrapper"> <a class="breadcrumbs__item" href="../">Главная </a><span class="breadcrumbs__divider">/</span><a class="breadcrumbs__item" href="#">Каталог</a><span class="breadcrumbs__divider">/</span><a class="breadcrumbs__item">Аксессуары</a></div>
-        <div class="catalog wrapper">
+        <div class="breadcrumbs wrapper"> <a class="breadcrumbs__item" href="../">Главная </a><span class="breadcrumbs__divider">/</span><a class="breadcrumbs__item" href="#">Каталог</a><span class="breadcrumbs__divider">/</span><a class="breadcrumbs__item">Мойки</a></div>
+        <div class="catalog-mob wrapper">
+          <div class="filter__wrap"><a class="filter__item" href="catalog1.html">
+              <div class="filter__vis"><img src="images/filters/sink.svg"/><span>Мойки</span></div>
+              <svg width="22" height="22">
+                <use xlink:href="images/sprite.svg#arr-bold-r"></use>
+              </svg></a><a class="filter__item" href="catalog2.html">
+              <div class="filter__vis"><img src="images/filters/faucet.svg"/><span>Смесители</span></div>
+              <svg width="22" height="22">
+                <use xlink:href="images/sprite.svg#arr-bold-r"></use>
+              </svg></a><a class="filter__item" href="catalog3.html">
+              <div class="filter__vis"><img src="images/filters/soap.svg"/><span>Аксессуары</span></div>
+              <svg width="22" height="22">
+                <use xlink:href="images/sprite.svg#arr-bold-r"></use>
+              </svg></a></div>
+        </div>
+        <div class="catalog wrapper deskCatalog">
           <div class="filters__wrap">
             <form class="filters">
               <div class="filter-mobTitle"> <span>Фильтрация</span>
@@ -213,7 +225,7 @@
                     <input type="radio" name="type"/><a class="filter__vis" href="catalog2.html"><img src="images/filters/faucet.svg"/><span>Смесители</span></a>
                   </label>
                   <label class="filter__item">
-                    <input type="radio" name="type" checked="checked"/><a class="filter__vis" href="catalog3.html"><img src="images/filters/soap.svg"/><span>Аксессуары</span></a>
+                    <input type="radio" name="type"/><a class="filter__vis" href="catalog3.html"><img src="images/filters/soap.svg"/><span>Аксессуары</span></a>
                   </label>
                 </div>
               </div>
@@ -232,7 +244,91 @@
                 </div>
               </div>
               <div class="filter">
-                <div class="filter__title"><span>Под фильтр</span>
+                <div class="filter__title"><span>Форма</span>
+                  <svg class="close-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#close-filter"></use>
+                  </svg>
+                  <svg class="open-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#arr-d"></use>
+                  </svg>
+                </div>
+                <div class="filter__wrap filter__hor">
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form1"></use>
+                    </svg>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form2"></use>
+                    </svg>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form3"></use>
+                    </svg>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form4"></use>
+                    </svg>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form5"></use>
+                    </svg>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form6"></use>
+                    </svg>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="form"/>
+                    <svg width="51" height="50">
+                      <use xlink:href="images/sprite.svg#form7"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="filter">
+                <div class="filter__title"><span>Кухонный блок</span>
+                  <svg class="close-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#close-filter"></use>
+                  </svg>
+                  <svg class="open-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#arr-d"></use>
+                  </svg>
+                </div>
+                <div class="filter__wrap filter__hor">
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">400</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">450</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">500</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">600</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">800</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="block"/><span class="filter__number">900</span>
+                  </label>
+                </div>
+              </div>
+              <div class="filter">
+                <div class="filter__title"><span>Материал</span>
                   <svg class="close-filter" width="14" height="14">
                     <use xlink:href="images/sprite.svg#close-filter"></use>
                   </svg>
@@ -244,22 +340,140 @@
                   <label class="filter__item filter__checkbox">
                     <input type="checkbox" name="material"/>
                     <div class="filter__checkbox-square"></div>
-                    <div class="filter__checkbox-text"><span>Дозаторы</span><sup>(411)</sup></div>
+                    <div class="filter__checkbox-text"><span>Кварц</span><sup>(411)</sup></div>
                   </label>
                   <label class="filter__item filter__checkbox">
                     <input type="checkbox" name="material"/>
                     <div class="filter__checkbox-square"></div>
-                    <div class="filter__checkbox-text"><span>Сифоны</span><sup>(325)</sup></div>
+                    <div class="filter__checkbox-text"><span>Мрамор</span><sup>(325)</sup></div>
                   </label>
                   <label class="filter__item filter__checkbox">
                     <input type="checkbox" name="material"/>
                     <div class="filter__checkbox-square"></div>
-                    <div class="filter__checkbox-text"><span>Ролл-мат</span><sup>(225)</sup></div>
+                    <div class="filter__checkbox-text"><span>Нержавеющая сталь</span><sup>(450)</sup></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter">
+                <div class="filter__title"><span>Цвет</span>
+                  <svg class="close-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#close-filter"></use>
+                  </svg>
+                  <svg class="open-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#arr-d"></use>
+                  </svg>
+                </div>
+                <div class="filter__wrap filter__hor">
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #606060;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Бежевый">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #EEE6D9;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Белый">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #FFFFFF;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Серый">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #576069;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #FCF5E4;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #97AAA4;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #ECF0ED;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #B5A59B;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #BA8A74;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #8A987D;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #F1DCCA;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #C2C0C2;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #999999;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #27375A;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #BEBBB2;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #0C0C0C;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #5D2E21;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #DDD7C9;"></span>
+                  </label>
+                  <label class="filter__item colorFilter" data-color="Графит">
+                    <input type="checkbox" name="color"/><span class="filter__color" style="background: #67605C;"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="filter">
+                <div class="filter__title"><span>Серия</span>
+                  <svg class="close-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#close-filter"></use>
+                  </svg>
+                  <svg class="open-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#arr-d"></use>
+                  </svg>
+                </div>
+                <div class="filter__wrap">
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>GranFest</span><sup>(411)</sup></div>
                   </label>
                   <label class="filter__item filter__checkbox">
                     <input type="checkbox" name="material"/>
                     <div class="filter__checkbox-square"></div>
-                    <div class="filter__checkbox-text"><span>Коландер</span><sup>(125)</sup></div>
+                    <div class="filter__checkbox-text"><span>GranFest QUARZ</span><sup>(325)</sup></div>
+                  </label>
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>GranFest URBAN</span><sup>(120)</sup></div>
+                  </label>
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>GranFest SMART</span><sup>(225)</sup></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter">
+                <div class="filter__title"><span>Способ монтажа</span>
+                  <svg class="close-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#close-filter"></use>
+                  </svg>
+                  <svg class="open-filter" width="14" height="14">
+                    <use xlink:href="images/sprite.svg#arr-d"></use>
+                  </svg>
+                </div>
+                <div class="filter__wrap">
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>Классический врезной</span><sup>(511)</sup></div>
+                  </label>
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>Подстольный</span><sup>(658)</sup></div>
                   </label>
                 </div>
               </div>
@@ -330,7 +544,7 @@
               </div>
             </div>
             <div class="catalog__list">
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/1.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/1.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -341,7 +555,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/2.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/2.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -352,7 +566,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/3.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/3.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -363,7 +577,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/4.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/4.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -374,7 +588,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/3.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/5.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -385,7 +599,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/4.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/2.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -396,7 +610,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/1.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/1.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -407,7 +621,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/2.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/2.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -418,7 +632,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/3.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/3.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -429,7 +643,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/4.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/4.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -440,7 +654,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/3.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/5.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>
@@ -451,7 +665,7 @@
                   <div class="card__price">6 900 руб.</div>
                 </div>
               </div>
-              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/3/4.jpg" alt=""/></a>
+              <div class="card swiper-slide"><a class="card__img" href="item.html"><img src="images/catalog/1/2.png" alt=""/></a>
                 <div class="card__info">
                   <div class="card__art">Артикул: LV-760K черный</div><a class="card__name" href="item.html">LEVEL 760K</a>
                   <div class="card__colors"><span style="background: #606060"></span><span style="background: #EEE6D9"></span><span style="background: #FFFFFF"></span><span style="background: #576069"></span><span style="background: #FCF5E4"></span></div>

@@ -1,0 +1,85 @@
+.mob-menu
+    .mob-menu__inner
+        .mob-menu__top
+            .spacer
+            a.logo(href='index.html')
+                img(src="images/logo/logo.svg", alt="Logo")
+
+            svg.close-mobTitle(width="24" height="24")
+                use(xlink:href="images/sprite.svg#cross-bold")
+
+        .mob-menu__content
+            .mob-menu__links
+                .mob-menu__section
+                    .mob-menu__section-name
+                        span Каталог
+                        svg.close-mobSection(width="22" height="22")
+                            use(xlink:href="images/sprite.svg#arr-bold-r")
+                    .mob-menu__section-wrap
+                        .mob-menu__section-inner
+                            a Мойки
+                            a Смесители
+                            a Аксессуары
+                            a.download Скачать каталог 
+                .mob-menu__section
+                    .mob-menu__section-name
+                        span О компании
+                        svg.close-mobSection(width="22" height="22")
+                            use(xlink:href="images/sprite.svg#arr-bold-r")
+                    .mob-menu__section-wrap
+                        .mob-menu__section-inner
+                            a Новости
+                            a Блог
+                            a Сертификаты
+                            a Политика
+                            a Контакты
+                .mob-menu__section
+                    .mob-menu__section-name
+                        span Покупателям
+                        svg.close-mobSection(width="22" height="22")
+                            use(xlink:href="images/sprite.svg#arr-bold-r")
+                    .mob-menu__section-wrap
+                        .mob-menu__section-inner
+                            a Акции
+                            a Интернет-магазин
+                            a Сервис
+                            a Полезная информация
+                .mob-menu__section
+                    .mob-menu__section-name
+                        span Партнерам
+                        svg.close-mobSection(width="22" height="22")
+                            use(xlink:href="images/sprite.svg#arr-bold-r")
+                    .mob-menu__section-wrap
+                        .mob-menu__section-inner
+                            a Стать дилером
+                            a Дилерская сеть
+
+            .mob-menu__bottom
+                .mob-menu__soc
+                    a(href="" target="_blank")
+                        svg(width="28" height="28")
+                            use(xlink:href="images/sprite.svg#tg")
+
+                    a(href="" target="_blank")
+                        svg(width="28" height="28")
+                            use(xlink:href="images/sprite.svg#vk")
+
+                    a(href="" target="_blank")
+                        svg(width="28" height="28")
+                            use(xlink:href="images/sprite.svg#yt")
+
+                    a(href="" target="_blank")
+                        svg(width="28" height="28")
+                            use(xlink:href="images/sprite.svg#dzen")
+
+                    a(href="" target="_blank")
+                        svg(width="28" height="28")
+                            use(xlink:href="images/sprite.svg#mailru")
+
+                .mob-menu__subscribe 
+                    form(id="subscribe")
+                        input(type="text", name="email", placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ")
+                        span.footer__subscribe-btn
+                            svg(width="30" height="30")
+                                use(xlink:href="images/sprite.svg#arr-thin")
+

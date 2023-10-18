@@ -7,6 +7,10 @@
 
 .item
     .item__main.wrapper
+        .mob-title
+            .item__art Артикул: LV-760K черный
+            h1.item__name Мойка LEVEL 760K
+
 
         .item__images
             .item__slider-nav-wrap
@@ -40,10 +44,20 @@
 
 
         .item__info
+            .deskTitle
 
-            .item__art Артикул: LV-760K черный
+                .item__art Артикул: LV-760K черный
 
-            h1.item__name Мойка LEVEL 760K
+                h1.item__name Мойка LEVEL 760K
+
+            .item__priceblock.mobItemPrice
+
+                a.addToCart.btn.btn--blue Добавить в корзину
+
+                .item__price 9 188,50
+                    span ₽
+
+                .item__oldprice 10 810 ₽
 
             .item__chars
 
@@ -66,7 +80,7 @@
 
             a.item__linktodescr(class="desc-link") Все характеристики
 
-            .item__priceblock
+            .item__priceblock.deskPrice
 
                 a.addToCart.btn.btn--blue Добавить в корзину
 
@@ -79,15 +93,20 @@
 
             .item__colors
 
-                a.item__color.colorFilter(data-color="Серый" href="#")
+                label.item__color.colorFilter(data-color="Серый" )
+                    input(type="radio", name="type")
                     img(src="images/item/colors/1.png")
-                a.item__color.colorFilter(data-color="Бежевый" href="#")
+                label.item__color.colorFilter(data-color="Бежевый" )
+                    input(type="radio", name="type")
                     img(src="images/item/colors/2.png")
-                a.item__color.colorFilter(data-color="Черный" href="#")
+                label.item__color.colorFilter(data-color="Черный" )
+                    input(type="radio", name="type")
                     img(src="images/item/colors/3.png")
-                a.item__color.colorFilter(data-color="Коричневый" href="#")
+                label.item__color.colorFilter(data-color="Коричневый")
+                    input(type="radio", name="type")
                     img(src="images/item/colors/4.png")
-                a.item__color.colorFilter(data-color="Кремовый" href="#")
+                label.item__color.colorFilter(data-color="Кремовый")
+                    input(type="radio", name="type")
                     img(src="images/item/colors/5.png")
 
 
@@ -112,6 +131,9 @@
                     p • антибактериальные свойства (на поверхности мойки не размножаются бактерии); 
                     p • гидрофобность; 
                     p • защиту от воздействия красящих веществ.
+
+                .item__desc-spoiler.open Смотреть всё
+                .item__desc-spoiler.close Скрыть
 
             .item__desc-block(data-tab="Характеристики")
                 .item__desc-chars
@@ -166,7 +188,9 @@
                     .item__desc-char
                         .item__desc-char-name Комплектация
                         .item__desc-char-value Сливная арматура
-                    
+
+                .item__desc-spoiler.open Смотреть всё
+                .item__desc-spoiler.close Скрыть
 
             .item__desc-block(data-tab="Полезная информация")
                 .item__desc-useful 
@@ -191,6 +215,15 @@
                             svg(width="24" height="24")
                                 use(xlink:href="images/sprite.svg#download")
                             span Скачать размеры монтажного проема
+                    .item__desc-useful-item
+                        .item__desc-useful-img
+                            img(src="images/item/useful/1.png")
+                        a.item__desc-useful-download
+                            svg(width="24" height="24")
+                                use(xlink:href="images/sprite.svg#download")
+                            span Скачать размеры монтажного проема
 
+                .item__desc-spoiler.open Смотреть всё
+                .item__desc-spoiler.close Скрыть
 
     include ../components/related.pug

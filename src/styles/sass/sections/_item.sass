@@ -5,6 +5,12 @@
         display: flex
         gap: 37px
         margin-bottom: 100px
+
+        +mw(800)
+            flex-direction: column
+            gap: 25px
+            padding-top: 0px
+            margin-bottom: 60px
         
 
     &__images
@@ -14,6 +20,14 @@
         height: 450px
         gap: 30px
         flex: 1
+
+        +mw(1000)
+            height: 335px
+
+        +mw(800)
+            flex-direction: column-reverse
+            width: 100%
+            gap: 10px
 
     &__slider-nav-wrap
         position: relative
@@ -69,6 +83,10 @@
         height: 100%
         border-radius: 14px
         background:  #F5F5F5
+
+        +mw(800)
+            height: 283px
+            width: 100%
 
 
         .swiper-slide
@@ -132,8 +150,18 @@
         display: flex
         align-items: center
 
+        +mw(1500)
+            flex-direction: column
+            gap: 10px
+
+        +mw(800)
+            padding-top: 0
+
 
         .addToCart
+
+            +mw(800)
+                width: 100%
 
     &__price
         padding-left: 15px
@@ -155,6 +183,9 @@
         line-height: 130%
         padding-bottom: 15px
 
+        +mw(800)
+            padding-top: 20px
+
 
     &__colors
         display: flex
@@ -164,6 +195,9 @@
         max-width: 50px
         position: relative
         cursor: pointer
+
+        +mw(800)
+            max-width: 75px
         
 
         img
@@ -182,3 +216,32 @@
             &:checked ~ img
                 border: 2px solid var(--c-font)
 
+    .mob-title
+        display: none
+
+        .item__art
+            font-size: 14px
+            color: #BBB
+
+        .item__name
+            font-size: 28px
+            border-bottom: none
+            padding-bottom: 0
+
+        +mw(800)
+            display: block
+
+    .mobItemPrice
+        display: none
+
+        +mw(800)
+            display: flex
+
+    .deskPrice
+
+        +mw(800)
+            display: none
+
+    .deskTitle
+        +mw(800)
+            display: none

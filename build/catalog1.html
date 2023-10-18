@@ -25,7 +25,15 @@
     <div class="container main-page">
       <div class="overlay"></div>
       <header>
-        <div class="header__top"><a class="logo" href="index.html"><img src="images/logo/logo.svg" alt="Logo"/></a>
+        <div class="header__top">
+          <div class="burger hidden">
+            <svg width="42" height="42">
+              <use xlink:href="images/sprite.svg#burger"></use>
+            </svg>
+          </div><a class="mobBack" href="catalog.html">
+            <svg width="42" height="42">
+              <use xlink:href="images/sprite.svg#arr-bold-l"></use>
+            </svg></a><a class="logo" href="index.html"><img src="images/logo/logo.svg" alt="Logo"/></a>
           <nav>
             <ul>
               <li><a href="catalog1.html">Каталог</a></li>
@@ -36,16 +44,29 @@
               <li><a href="">Партнерам</a></li>
             </ul>
           </nav>
-          <div class="personal"><a class="personal__icon">
+          <div class="personal"><a class="personal__icon headerSearchBtn">
+              <svg width="22px" height="22px">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg></a><a class="personal__icon headerCart">
               <svg width="24px" height="25px">
                 <use xlink:href="images/sprite.svg#cart"></use>
-              </svg></a><a class="personal__icon">
+              </svg></a><a class="personal__icon headerFav">
               <svg width="24px" height="25px">
                 <use xlink:href="images/sprite.svg#heart"></use>
-              </svg></a><a class="personal__icon">
+              </svg></a><a class="personal__icon headerLk">
               <svg width="24px" height="24px">
                 <use xlink:href="images/sprite.svg#person"></use>
               </svg></a></div>
+        </div>
+        <div class="header-m-search wrapper">
+          <div class="header__search-wrap">
+            <div class="header__search"><span class="search-btn">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg></span>
+              <input class="search-input" type="text" name="search" placeholder="Поиск по товарам"/>
+            </div>
+          </div>
         </div>
         <div class="header__bottom">
           <div class="header__search-wrap">
@@ -156,17 +177,37 @@
             <div class="header__filters-btn btn btn--blue">Применить фильтры</div>
           </div>
         </div>
+        <div class="mob-menu-fixed">
+          <div class="mmf-inner"><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg><span>Главная</span></a><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#catalog"></use>
+              </svg><span>Каталог</span></a><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg><span>Контакты</span></a><a class="mmf-item">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#person"></use>
+              </svg><span>Авторизация</span></a></div>
+        </div>
       </header>
       <main class="main-page">
         <div class="breadcrumbs wrapper"> <a class="breadcrumbs__item" href="../">Главная </a><span class="breadcrumbs__divider">/</span><a class="breadcrumbs__item" href="#">Каталог</a><span class="breadcrumbs__divider">/</span><a class="breadcrumbs__item">Мойки</a></div>
         <div class="catalog wrapper">
           <div class="filters__wrap">
             <form class="filters">
-              <div class="filter">
+              <div class="filter-mobTitle"> <span>Фильтрация</span>
+                <svg class="close-mobTitle" width="24" height="24">
+                  <use xlink:href="images/sprite.svg#cross-bold"></use>
+                </svg>
+              </div>
+              <div class="filter deskTypeOfProduct">
                 <div class="filter__title"><span>Тип товара</span></div>
                 <div class="filter__wrap">
-                  <label class="filter__item activeSection">
-                    <input type="radio" name="type" checked="checked"/><a class="filter__vis" href="catalog1.html"><img src="images/filters/sink.svg"/><span>Мойки</span></a>
+                  <label class="filter__item">
+                    <input type="radio" name="type"/><a class="filter__vis" href="catalog1.html"><img src="images/filters/sink.svg"/><span>Мойки</span></a>
                   </label>
                   <label class="filter__item">
                     <input type="radio" name="type"/><a class="filter__vis" href="catalog2.html"><img src="images/filters/faucet.svg"/><span>Смесители</span></a>
@@ -176,7 +217,7 @@
                   </label>
                 </div>
               </div>
-              <div class="filter">
+              <div class="filter deskPrice">
                 <div class="filter__title"><span>Цена</span></div>
                 <div class="filter__wrap priceWrap">
                   <div class="filter__priceInputs">
@@ -294,6 +335,11 @@
                     <div class="filter__checkbox-square"></div>
                     <div class="filter__checkbox-text"><span>Мрамор</span><sup>(325)</sup></div>
                   </label>
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>Нержавеющая сталь</span><sup>(450)</sup></div>
+                  </label>
                 </div>
               </div>
               <div class="filter">
@@ -388,6 +434,11 @@
                   <label class="filter__item filter__checkbox">
                     <input type="checkbox" name="material"/>
                     <div class="filter__checkbox-square"></div>
+                    <div class="filter__checkbox-text"><span>GranFest URBAN</span><sup>(120)</sup></div>
+                  </label>
+                  <label class="filter__item filter__checkbox">
+                    <input type="checkbox" name="material"/>
+                    <div class="filter__checkbox-square"></div>
                     <div class="filter__checkbox-text"><span>GranFest SMART</span><sup>(225)</sup></div>
                   </label>
                 </div>
@@ -414,12 +465,41 @@
                   </label>
                 </div>
               </div>
+              <div class="filter mobPrice">
+                <div class="filter__title"><span>Цена</span></div>
+                <div class="filter__wrap priceWrap">
+                  <div class="filter__priceInputs">
+                    <div class="filter__priceInput"><span>от</span>
+                      <input class="priceMin" type="text" value="2600"/><span>₽</span>
+                    </div>
+                    <div class="filter__priceInput"><span>до</span>
+                      <input class="priceMax" type="text" value="265500"/><span>₽</span>
+                    </div>
+                  </div>
+                  <div class="filter__price" data-min="2600" data-max="265500"></div>
+                </div>
+              </div>
               <div class="filter__submit">
                 <div class="btn btn--blue">Применить фильтры</div>
               </div>
             </form>
           </div>
           <div class="catalog__wrap">
+            <div class="mob-filters-line"> 
+              <div class="mob-filter mobSort catalog__sort-wrap">
+                <div class="catalog__sort">
+                  <svg width="18" height="18">
+                    <use xlink:href="images/sprite.svg#arr-d2"></use>
+                  </svg><span class="curr-sort">По популярности</span>
+                </div>
+                <div class="catalog__choose-sorts"><span class="catalog__choose-sort">По популярности</span><span class="catalog__choose-sort">Сначала дешевые</span><span class="catalog__choose-sort">Сначала дорогие</span><span class="catalog__choose-sort">По названию (А-Я)</span></div>
+              </div>
+              <div class="mob-filter mobFilter">
+                <svg width="22" height="22">
+                  <use xlink:href="images/sprite.svg#sort"></use>
+                </svg><span>Фильтр</span>
+              </div>
+            </div>
             <div class="catalog__filters">
               <div class="catalog__search"><span class="search-btn">
                   <svg width="24" height="24">
