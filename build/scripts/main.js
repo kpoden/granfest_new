@@ -45,11 +45,11 @@ function bodyLock(con) {
             spaceBetween: 110,
             freeMode: false,
             loop: false,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            //   },
-            // speed: 1000,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+              },
+            speed: 1000,
             pagination: {
                 el: ".swiper-pagination"
               }
@@ -69,27 +69,38 @@ function sortFilters() {
 
   if(document.querySelector('.catalog__sort-wrap')) {
 
-  
+  const sortFilters = document.querySelectorAll('.catalog__sort-wrap');
 
-  const sortFilter = document.querySelector('.catalog__sort-wrap'),
-        currSort = document.querySelector('.curr-sort'),
-        chooseWrap = document.querySelector('.catalog__choose-sorts'),
-        chooseSorts = document.querySelectorAll('.catalog__choose-sort');
+  sortFilters.forEach(el => {
+      const sortFilter = el,
+          currSort = el.querySelector('.curr-sort'),
+          chooseWrap = el.querySelector('.catalog__choose-sorts'),
+          chooseSorts = el.querySelectorAll('.catalog__choose-sort');
 
-  
-  sortFilter.addEventListener('click', () => {
-    if(sortFilter.classList.contains('openedSorts')) {
-      sortFilter.classList.remove('openedSorts')
-    } else {
-      sortFilter.classList.add('openedSorts')
-    }
-  })
+    document.body.addEventListener('click', (e)=> {
+      if(!e.target.closest('.catalog__sort')) {
+        sortFilter.classList.remove('openedSorts');
+        console.log(e.target);
+      }
+      
+    })
+    
+    sortFilter.addEventListener('click', () => {
+      if(sortFilter.classList.contains('openedSorts')) {
+        sortFilter.classList.remove('openedSorts');
+      } else {
+        sortFilter.classList.add('openedSorts');
+      }
+    })
 
-  chooseSorts.forEach((el) => {
-    el.addEventListener('click', () => {
-      currSort.textContent = el.textContent;
+    chooseSorts.forEach((el) => {
+      el.addEventListener('click', () => {
+        currSort.textContent = el.textContent;
+      })
     })
   })
+
+  
 }
 
 }
@@ -105,7 +116,7 @@ function itemMainSlidersInit() {
   
     const navSlider = new Swiper('.item__slider-nav', {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 10,
       loop: false,
       centeredSlides: false,
       slideToClickedSlide: true,
@@ -113,6 +124,7 @@ function itemMainSlidersInit() {
       breakpoints: {
         800: {
           direction: 'vertical',
+          spaceBetween: 30
         }
       }
     });
@@ -285,7 +297,8 @@ function headerFiltersListen() {
         headerSearch = document.querySelector('.header__search-wrap'),
         headerFilters = document.querySelector('.header__filters-wrap'),
         headerBottom = document.querySelector('.header__bottom'),
-        overlay = document.querySelector('.overlay');
+        overlay = document.querySelector('.overlay'),
+        container = document.querySelector('.container')
 
         if(openSearch) {
 
@@ -308,6 +321,10 @@ function headerFiltersListen() {
         if(openFilters) {
           openFilters.addEventListener('click', ()=> {
             headerFilters.classList.add('activeFiltersWrap');
+            const headerFiltersHeight = headerFilters.getBoundingClientRect().height;
+            container.style.height = headerFiltersHeight + 120 + "px";
+            container.style.overflow = "hidden"
+
             headerBottom.classList.add('activeWrap');
             overlay.classList.add('activeOverlay');
           })
@@ -318,6 +335,7 @@ function headerFiltersListen() {
           headerFilters.classList.remove('activeFiltersWrap');
           headerBottom.classList.remove('activeWrap');
           overlay.classList.remove('activeOverlay');
+          container.style.height = '';
         })
 
         overlay.addEventListener('click', ()=> {
