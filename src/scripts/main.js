@@ -298,7 +298,8 @@ function headerFiltersListen() {
         headerFilters = document.querySelector('.header__filters-wrap'),
         headerBottom = document.querySelector('.header__bottom'),
         overlay = document.querySelector('.overlay'),
-        container = document.querySelector('.container')
+        container = document.querySelector('.container'),
+        mmf = document.querySelector('.mob-menu-fixed');
 
         if(openSearch) {
 
@@ -322,8 +323,9 @@ function headerFiltersListen() {
           openFilters.addEventListener('click', ()=> {
             headerFilters.classList.add('activeFiltersWrap');
             const headerFiltersHeight = headerFilters.getBoundingClientRect().height;
-            container.style.height = headerFiltersHeight + 120 + "px";
-            container.style.overflow = "hidden"
+            container.style.height = headerFiltersHeight  + "px";
+            container.style.overflow = "hidden";
+            mmf.classList.add('hidden');
 
             headerBottom.classList.add('activeWrap');
             overlay.classList.add('activeOverlay');
@@ -335,6 +337,7 @@ function headerFiltersListen() {
           headerFilters.classList.remove('activeFiltersWrap');
           headerBottom.classList.remove('activeWrap');
           overlay.classList.remove('activeOverlay');
+          mmf.classList.remove('hidden');
           container.style.height = '';
         })
 

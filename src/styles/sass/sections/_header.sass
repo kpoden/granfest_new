@@ -21,7 +21,9 @@ header
         .logo
             display: flex
             align-items: center
+            width: 143px
             img
+                width: 100%
 
         .burger
             transition: .2s
@@ -202,10 +204,12 @@ header
                 padding: 20px 50px
             
             +mw(800)
-                padding: 10px 20px
+                padding: 10px 20px 30px
+                border-radius: 0 0 0 0
 
             &.activeFiltersWrap
                 display: block !important
+                z-index: 1200
 
             .header__filters-logo
                 display: flex

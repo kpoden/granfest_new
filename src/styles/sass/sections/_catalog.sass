@@ -101,6 +101,11 @@
                 flex-wrap: wrap
                 flex-direction: row
 
+                &.filter__blockType
+                    +mw(800)
+                        display: grid
+                        grid-template-columns: repeat(3, 1fr)
+
             &__item
                 cursor: pointer
                 position: relative
@@ -186,17 +191,10 @@
                     position: relative
                     display: block
 
-                    // &::before
-                    //     content: ""
-                    //     position: absolute
-                    //     display: none
-                    //     top: 50%
-                    //     left: 50%
-                    //     transform: translate(-50%, -50%)
-                    //     width: 8px
-                    //     height: 8px
-                    //     border-radius: 2px 
-                    //     background: var(--c-font)
+                    +mw(800)
+                        width: 32px
+                        height: 32px
+
 
                     &::before
                         content: ""
@@ -210,6 +208,10 @@
                         border-bottom: 2px solid #fff
                         border-right: 2px solid #fff
 
+                        +mw(800)
+                            width: 10px
+                            height: 17px
+
 
 
 
@@ -217,6 +219,9 @@
                     color: #0C0C0C
                     font-size: 16px
                     line-height: 130%
+
+                    +mw(800)
+                        font-size: 22px
 
 
             &__color
@@ -226,6 +231,10 @@
                 border-radius: 2px
                 border: 0.2px solid  #bebebe
                 position: relative
+
+                +mw(800)
+                    width: 32px
+                    height: 32px
 
 
                 &:after
@@ -239,6 +248,10 @@
                     height: 10px
                     border-bottom: 2px solid var(--c-font)
                     border-right: 2px solid var(--c-font)
+
+                    +mw(800)
+                        width: 10px
+                        height: 17px
 
 
     &__wrap
@@ -466,6 +479,7 @@
                 color:  #BBB
                 font-size: 20px
 
+
             input[type="text"]
                 color:  #0C0C0C
                 font-size: 19px
@@ -534,6 +548,8 @@
         gap: 10px
         color: #0C0C0C
         font-size: 22px
+        width: 24px
+        
 
 
 .deskCatalog
