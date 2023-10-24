@@ -1,0 +1,278 @@
+.breadcrumbs.wrapper 
+    a(href="../").breadcrumbs__item Главная 
+    span.breadcrumbs__divider /
+    a(href="#").breadcrumbs__item Каталог
+    span.breadcrumbs__divider /
+    a.breadcrumbs__item Корзина
+
+.err-wrap.wrapper.hidden
+    .inner-err
+
+.basket.wrapper
+    
+
+    .basket__content
+        .basket__inner
+            .basket__tabs
+                .basket__tab.listTab.activeTab(data-tab="Корзина") 1. Корзина
+                .basket__tab.contactTab(data-tab="Контактные данные") 2. Контактные данные
+                .basket__tab.addressTab(data-tab="Адрес и доставка") 3. Адрес и доставка
+
+            .basket__blocks
+                .basket__list.basket__block.activeBlock(data-tab="Корзина")
+                    .basket__empty-block.hidden
+                        span В Вашей корзине пока нет товаров, добавьте их из каталога
+                        .btn.btn--blue В каталог
+                    .basket__item 
+                        .basket__mob-close
+                            svg(width="15" height="16")
+                                use(xlink:href="images/sprite.svg#basket-close")
+                        .basket__item-info-wrap
+                            .basket__item-img
+                                img(src="images/catalog/1/5.png")
+
+                            .basket__item-info
+                                .basket__item-info-top
+                                    .basket__item-art Артикул: 7652 черный
+                                    .basket__item-name Г-обр. D-35мм с краном питьевой воды черный
+                                    .basket__item-color Цвет: черный
+
+                                .basket__count-wrap
+                                    .basket__item-count
+                                        span.basket__item-count-minus -
+                                        input.basket__item-count-num(type="text", value="1")
+                                        span.basket__item-count-plus +
+
+                                    .basket__mob-price 8 500,00
+                                        span ₽
+
+
+
+
+                        .basket__item-total
+                            .basket__item-price 8 500,00
+                                span ₽
+
+                            .basket__item-actions
+                                a.basket__item-fav.basket__item-action
+                                    svg(width="15" height="16")
+                                        use(xlink:href="images/sprite.svg#heart")
+                                    span Добавить в избранное
+
+                                a.basket__item-del.basket__item-action
+                                    svg(width="15" height="16")
+                                        use(xlink:href="images/sprite.svg#delete")
+                                    span Удалить
+
+
+                    .basket__item 
+                        .basket__mob-close
+                            svg(width="15" height="16")
+                                use(xlink:href="images/sprite.svg#basket-close")
+                        .basket__item-info-wrap
+                            .basket__item-img
+                                img(src="images/catalog/2/1.png")
+
+                            .basket__item-info
+                                .basket__item-info-top
+                                    .basket__item-art Артикул: 7652 черный
+                                    .basket__item-name Г-обр. D-35мм с краном питьевой воды черный
+                                    .basket__item-color Цвет: черный
+
+                                .basket__count-wrap
+                                    .basket__item-count
+                                        span.basket__item-count-minus -
+                                        input.basket__item-count-num(type="text", value="1")
+                                        span.basket__item-count-plus +
+
+                                    .basket__mob-price 8 500,00
+                                        span ₽
+
+
+
+
+                        .basket__item-total
+                            .basket__item-price 8 500,00
+                                span ₽
+
+                            .basket__item-actions
+                                a.basket__item-fav.basket__item-action
+                                    svg(width="15" height="16")
+                                        use(xlink:href="images/sprite.svg#heart")
+                                    span Добавить в избранное
+
+                                a.basket__item-del.basket__item-action
+                                    svg(width="15" height="16")
+                                        use(xlink:href="images/sprite.svg#delete")
+                                    span Удалить
+
+
+                    .basket__item
+                        .basket__mob-close
+                            svg(width="15" height="16")
+                                use(xlink:href="images/sprite.svg#basket-close")
+                        .basket__item-info-wrap
+                            .basket__item-img
+                                img(src="images/catalog/3/1.png")
+
+                            .basket__item-info
+                                .basket__item-info-top
+                                    .basket__item-art Артикул: 7652 черный
+                                    .basket__item-name Г-обр. D-35мм с краном питьевой воды черный
+                                    .basket__item-color Цвет: черный
+
+                                .basket__count-wrap
+                                    .basket__item-count
+                                        span.basket__item-count-minus -
+                                        input.basket__item-count-num(type="text", value="1")
+                                        span.basket__item-count-plus +
+
+                                    .basket__mob-price 8 500,00
+                                        span ₽
+
+
+
+
+                        .basket__item-total
+                            .basket__item-price 8 500,00
+                                span ₽
+
+                            .basket__item-actions
+                                a.basket__item-fav.basket__item-action
+                                    svg(width="15" height="16")
+                                        use(xlink:href="images/sprite.svg#heart")
+                                    span Добавить в избранное
+
+                                a.basket__item-del.basket__item-action
+                                    svg(width="15" height="16")
+                                        use(xlink:href="images/sprite.svg#delete")
+                                    span Удалить
+
+
+
+
+                .basket__contacts.basket__block(data-tab="Контактные данные")
+                    .basket__contacts-inner
+                        .basket__contacts-tabs
+                            .basket__contacts-tab.activeTab(data-tab="Физическое лицо") Физическое лицо
+                            .basket__contacts-tab(data-tab="Юридическое лицо") Юридическое лицо
+
+                        .basket__contacts-blocks
+                            .basket__contacts-block.fizBlock.activeBlock(data-tab="Физическое лицо")
+                                label.input-wrap
+                                    span.inp-name ФИО <span class="red">*</span>
+                                    input.inp(type="text" name="name" placeholder="Васильев Андрей Николаевич" data-required)
+                                label.input-wrap
+                                    span.inp-name Номер телефона<span class="red">*</span>
+                                    input.inp(type="text" name="phone" placeholder="+7 (900) 000-00-00" data-required)
+                                label.input-wrap
+                                    span.inp-name E-mail<span class="red">*</span>
+                                    input.inp(type="text" name="email" placeholder="E-mail@mail.ru" data-required)
+
+
+                            .basket__contacts-block.urBlock(data-tab="Юридическое лицо")
+                                label.input-wrap
+                                    span.inp-name Название компании<span class="red">*</span>
+                                    input.inp(type="text" name="name" placeholder="ООО «Название компании»" data-required)
+                                label.input-wrap
+                                    span.inp-name Номер телефона<span class="red">*</span>
+                                    input.inp(type="text" name="phone" placeholder="+7 (900) 000-00-00" data-required)
+                                label.input-wrap
+                                    span.inp-name E-mail<span class="red">*</span>
+                                    input.inp(type="text" name="email" placeholder="E-mail@mail.ru" data-required)
+
+                        .basket__bottom
+                            span Подробности уточняйте у менеджера интернет-магазина тел. 
+                            a(href="tel:+7 (926) 907 79 84") +7 (926) 907 79 84
+
+
+
+
+
+                .basket__address.basket__block(data-tab="Адрес и доставка")
+                    .basket__address-inner
+                        .basket__address-tabs
+                            .basket__address-tab.activeTab(data-tab="Самовывоз") Самовывоз
+                            .basket__address-tab(data-tab="Доставка") Доставка
+
+                        .basket__address-blocks
+                            .basket__address-block.activeBlock(data-tab="Самовывоз")
+                                label
+                                    input(type="radio", name="delivery")
+                                    .radio-circle
+                                    span.basket__address-text Из шоурума (Москва, м. Площадь Ильича Золоторожский Вал, 8, ст. м. Площадь Ильича / ст. м. Римская")
+
+                                label
+                                    input(type="radio", name="delivery")
+                                    .radio-circle
+                                    span.basket__address-text Со склада готовой продукции (Московская обл., Богородский городской округ, р.п. Обухово, Кудиновское ш., 4, территория "Атлант-Парк", склад №25) 
+
+                                label.input-wrap
+                                    span.inp-name Комментарий
+                                    input.inp(type="text" name="name" placeholder="Введите Ваш комментарий...")
+
+                            .basket__address-block(data-tab="Доставка")
+                                label
+                                    input(type="radio", name="delivery")
+                                    .radio-circle
+                                    span.basket__address-text Курьерская доставка (по Москве и Московской обл.)
+
+                                label
+                                    input(type="radio", name="delivery")
+                                    .radio-circle
+                                    span.basket__address-text Транспортная компания (по всем регионам РФ)
+
+                                .basket__address-inp-wrap
+                                    label.input-wrap
+                                        span.inp-name Город<span class="red">*</span>
+                                        input.inp(type="text" name="name" placeholder="Укажите город" data-required)
+                                    label.input-wrap
+                                        span.inp-name Адрес<span class="red">*</span>
+                                        input.inp(type="text" name="name" placeholder="Введите адрес" data-required)
+
+                                    label.input-wrap
+                                        span.inp-name Комментарий
+                                        input.inp(type="text" name="name" placeholder="Введите Ваш комментарий...")
+
+
+
+                        .basket__bottom
+                            span Подробности уточняйте у менеджера интернет-магазина тел. 
+                            a(href="tel:+7 (926) 907 79 84") +7 (926) 907 79 84
+
+
+
+    .basket__total
+        .basket__total-info
+            h2.basket__total-title Итого:
+
+            .basket__total-row
+                span.basket__total-row-name Cтоимость:
+                span.basket__total-row-num 8 500₽
+            .basket__total-row.basket__total-discount
+                span.basket__total-row-name Скидка:
+                span.basket__total-row-num 0₽
+
+            
+
+
+            .basket__total-promo-wrap
+                .basket__total-promo
+                    input(type="text", name="promo", placeholder="Введите промокод...")
+                    svg.basket__total-promo-btn(width="29" height="28")
+                        use(xlink:href="images/sprite.svg#basket-arr")
+
+            .basket__total-row.basket__mob-row
+                span.basket__total-row-name Итого:
+                span.basket__total-row-num 8 500
+                    span ₽
+
+            .basket__total-row
+                span.basket__total-row-name Общая стоимость:
+                span.basket__total-row-num 8 500₽
+
+        .basket__total-btns
+            a.basket__total-checkout.first-step-btn.btn.btn--blue Перейти к оформлению
+            a.basket__total-checkout.second-step-btn.hidden.btn.btn--blue К следующему этапу
+            a.basket__total-checkout.third-step-btn.hidden.btn.btn--blue Перейти к оплате
+            a.basket__total-oneclick Купить в один клик

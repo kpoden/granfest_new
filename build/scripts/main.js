@@ -659,5 +659,336 @@ class MobMenu {
 const mobMenu = new MobMenu;
 
 
+class Basket {
+  constructor() {
+
+    this.basket = document.querySelector('.basket');
+
+    this.productQuant = document.querySelectorAll('.basket__item').length;
+
+    this.errWrap = document.querySelector('.err-wrap');
+    this.errWrapText = document.querySelector('.err-wrap .inner-err');
+
+    this.inputs = document.querySelectorAll('.inp');
+
+    this.basketFirstBtn = document.querySelector('.basket__total-checkout.first-step-btn');
+    this.basketSecondBtn = document.querySelector('.basket__total-checkout.second-step-btn');
+    this.basketThirdBtn = document.querySelector('.basket__total-checkout.third-step-btn');
+
+    this.tabs = document.querySelectorAll('.basket__tab');
+    this.blocks = document.querySelectorAll('.basket__block');
+    this.contactTabs = document.querySelectorAll('.basket__contacts-tab');
+    this.contactBlock = document.querySelectorAll('.basket__contacts-block');
+    this.addressTabs = document.querySelectorAll('.basket__address-tab');
+    this.addressBlock = document.querySelectorAll('.basket__address-block');
+
+    this.listTab = document.querySelector('.listTab');
+    this.contactTab = document.querySelector('.contactTab');
+    this.addressTab = document.querySelector('.addressTab');
+
+    this.firstBlock = document.querySelector('.basket__list');
+    this.secondBlock = document.querySelector('.basket__contacts');
+    this.thirdBlock = document.querySelector('.basket__address');
+
+    this.init()
+  }
+
+  createErr(text, els) {
+    this.errWrap.classList.remove('hidden');
+    this.errWrapText.textContent = text;
+    els.forEach(el=>el.classList.add('_err-inp'));
+
+  }
+
+  deleteErr() {
+
+    this.inputs.forEach(el=>el.classList.remove('_err-inp'));
+    this.errWrap.classList.add('hidden');
+    this.errWrapText.textContent = '';
+  }
+
+  listenProceedToPay() {
+
+    this.basketThirdBtn.addEventListener('click', ()=> {
+      if(!this.validateThirdStep()) {
+        return;
+      }
+      console.log('pay');
+
+    })
+
+  }
+
+  validateThirdStep() {
+
+    const thirdStepRadios = this.thirdBlock.querySelectorAll('.basket__address-block.activeBlock input[type="radio"]');
+
+    const noRadioChecked = Array.from(thirdStepRadios).every(radio => !radio.checked);
+
+    this.deleteErr();
+    if (noRadioChecked) {
+
+      this.createErr('Выберите тип доставки.', []);
+      return false; 
+    }
+
+    let errArr = [];
+    const currAddressBlock = document.querySelector('.basket__address-block.activeBlock');
+    const currAddressInputs = currAddressBlock.querySelectorAll('input[data-required]');
+
+    currAddressInputs.forEach(el=>{
+      if(el.value === "") {
+        errArr.push(el);
+      }
+    })
+
+    if(errArr.length > 0) {
+      this.initThirdStep();
+      this.createErr('Заполните обязательные поля.', errArr)
+      return false;
+    } else {
+      return true;
+    }
+
+  }
+
+  validateSecondStep() {
+    
+    this.deleteErr();
+    let errArr = [];
+    const currContactsBlock = document.querySelector('.basket__contacts-block.activeBlock');
+    const currContactsInputs = currContactsBlock.querySelectorAll('input[data-required]');
+
+    currContactsInputs.forEach(el=>{
+      if(el.value === "") {
+        errArr.push(el);
+      }
+    })
+
+    if(errArr.length > 0) {
+      this.initSecondStep();
+      this.createErr('Заполните обязательные поля.', errArr)
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+
+
+  removeActiveClasses() {
+    this.tabs.forEach(el=>{el.classList.remove('activeTab')});
+    this.blocks.forEach(el=>{el.classList.remove('activeBlock')});
+  }
+
+  initSecondStep() {
+    this.removeActiveClasses();
+    this.contactTab.classList.add('activeTab');
+    this.secondBlock.classList.add('activeBlock');
+    this.basketFirstBtn.classList.add('hidden');
+    this.basketSecondBtn.classList.remove('hidden');
+    this.basketThirdBtn.classList.add('hidden');
+  }
+
+  initThirdStep() {
+
+    if(!this.validateSecondStep()) {
+      return;
+    }
+
+    this.removeActiveClasses();
+    this.addressTab.classList.add('activeTab');
+    this.thirdBlock.classList.add('activeBlock');
+    this.basketFirstBtn.classList.add('hidden');
+    this.basketSecondBtn.classList.add('hidden');
+    this.basketThirdBtn.classList.remove('hidden');
+  }
+
+
+  listenBasketTab() {
+    this.listTab.addEventListener('click', ()=>{
+      this.removeActiveClasses();
+      this.listTab.classList.add('activeTab');
+      this.firstBlock.classList.add('activeBlock');
+      this.basketFirstBtn.classList.remove('hidden');
+      this.basketSecondBtn.classList.add('hidden');
+      this.basketThirdBtn.classList.add('hidden');
+    })
+  }
+
+  listenAddressTab() {
+      if(this.productQuant > 0) {
+      this.addressTab.addEventListener('click', ()=>{
+        this.initThirdStep();
+      })
+
+      this.basketSecondBtn.addEventListener('click', ()=>{
+        this.initThirdStep();
+      })
+    }
+  }
+
+
+
+  listenContactTab() {
+    if(this.productQuant > 0) {
+      this.contactTab.addEventListener('click', ()=>{
+        this.initSecondStep();
+      })
+      this.basketFirstBtn.addEventListener('click', ()=>{
+        this.initSecondStep();
+      })
+    }
+  }
+
+  listenTabs() {
+    this.listenBasketTab();
+    this.listenContactTab();
+    this.listenAddressTab();
+  }
+
+  listenContactsTabs() {
+    this.contactTabs.forEach(el=>{
+      el.addEventListener('click', (tab)=>{
+        tab = tab.target;
+        this.contactTabs.forEach(el=>el.classList.remove('activeTab'));
+        tab.classList.add('activeTab');
+
+        const tabName = tab.dataset.tab;
+
+        this.contactBlock.forEach(block=>{
+          block.classList.remove('activeBlock');
+          if(tabName == block.dataset.tab) {
+            block.classList.add('activeBlock');
+            
+          }
+        })
+      })
+    })
+  }
+
+  listenAddressTabs() {
+    this.addressTabs.forEach(el=>{
+      el.addEventListener('click', (tab)=>{
+        tab = tab.target;
+        this.addressTabs.forEach(el=>el.classList.remove('activeTab'));
+        tab.classList.add('activeTab');
+
+        const tabName = tab.dataset.tab;
+
+        this.addressBlock.forEach(block=>{
+          block.classList.remove('activeBlock');
+          if(tabName == block.dataset.tab) {
+            block.classList.add('activeBlock');
+            
+          }
+        })
+      })
+    })
+  }
+
+  
+  maskInit() {
+    if(this.basket.querySelector('input[name=phone]')) {
+    
+    const phoneInput = this.basket.querySelectorAll('input[name=phone]');
+    phoneInput.forEach(el=>{
+      const maskOptions = {
+        mask: '+{7}(000) 000-00-00'
+      };
+      const mask = IMask(el, maskOptions);
+    })
+    
+    }
+}
+
+
+  init() {
+    this.listenContactsTabs();
+    this.listenAddressTabs();
+    this.listenProceedToPay();
+    this.listenTabs();
+    this.maskInit();
+  }
+}
+
+if(document.querySelector('.basket')) {
+  const basket = new Basket;
+}
+
+
+
+function quantInput() {
+  if(document.querySelector('.basket__item-count')) {
+
+    const quantInputWraps = document.querySelectorAll('.basket__item-count');
+
+
+    quantInputWraps.forEach((el)=>{
+      const minusBtn = el.querySelector('.basket__item-count-minus');
+      const plusBtn = el.querySelector('.basket__item-count-plus');
+      const quantInput = el.querySelector('.basket__item-count-num');
+
+      minusBtn.addEventListener('click', () => {
+        let count = parseInt(quantInput.value) - 1;
+        count = count < 1 ? 1 : count;
+        quantInput.value = count;
+        quantInput.setAttribute('value', count);
+      });
+  
+      
+      plusBtn.addEventListener('click', () => {
+        let count = parseInt(quantInput.value) + 1;
+        count = count > parseInt(quantInput.getAttribute('data-max-count')) ? parseInt(quantInput.getAttribute('data-max-count')) : count;
+        quantInput.value = count;
+        quantInput.setAttribute('value', count);
+      });
+  
+      quantInput.addEventListener("change", function() {
+            if (this.value.match(/[^0-9]/g)) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            }
+            if (this.value == "") {
+                this.value = 1;
+                quantInput.setAttribute('value', 1);
+            }
+            if (this.value > parseInt(this.getAttribute('data-max-count'))) {
+                this.value = parseInt(this.getAttribute('data-max-count'));
+            }
+        });
+  
+      quantInput.addEventListener("keyup", function() {
+            if (this.value.match(/[^0-9]/g)) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            }
+        });
+  
+      quantInput.addEventListener("input", function() {
+            if (this.value.match(/[^0-9]/g)) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            }
+        });
+  
+      quantInput.addEventListener("click", function() {
+            if (this.value.match(/[^0-9]/g)) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            }
+        }); 
+
+
+    });
+  }
+}
+
+quantInput()
+
+
+
+
+
+
+
+
+
 
 });
