@@ -25,6 +25,13 @@
     +mw(800)
         display: none
 
+    
+
+.section-subtitle
+    color: rgba(0, 0, 0, 0.70)
+    font-size: 20px
+    line-height: 130%
+
 .arr-r
     cursor: pointer
     
@@ -66,6 +73,9 @@
 .yellow
     color: #F9CC49
 
+.underline
+    text-decoration: underline
+
 
 .unvis
     opacity: 0
@@ -104,6 +114,11 @@
         top: 50%
         transform: translateY(-50%) rotate(-45deg)
 
+
+
+button
+    background: inherit
+    color: inherit
 .input-wrap
     position: relative
     margin-top: 17px
@@ -112,7 +127,7 @@
 
 .inp-name
     position: absolute
-    top: -16px
+    top: -18px
     color: var(--c-font)
     font-size: 12px
 
@@ -135,3 +150,15 @@
 ._err-inp
     border-color: red 
     border-width: 1px
+
+
+._error-txt
+    color:  #C00
+    font-size: 12px
+    font-weight: 500
+    display: block
+    padding-top: 5px
+
+
+._error-input
+    border: 1.5px solid #C00 !important

@@ -24,7 +24,7 @@ footer.footer
                         svg(width="24" height="24")
                             use(xlink:href="images/sprite.svg#mapdot-w")
                     span.footer__item-text 
-                        a(href="") Москва, м. Площадь Ильича Золоторожский Вал, 8
+                        a(href="") Москва, ул. Золоторожский Вал, 8, ст. м. Площадь Ильича / ст. м. Римская
                     
 
 
@@ -87,9 +87,10 @@ footer.footer
                         use(xlink:href="images/sprite.svg#mailru")
 
             .footer__subscribe
-                form(id="subscribe")
-                    input(type="text", name="email", placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ")
-                    span.footer__subscribe-btn
+                form(id="subscribe-form")
+                    label.input-wrap
+                        input(type="text", name="email", placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ", data-required)
+                    button.footer__subscribe-btn(type="submit")
                         svg(width="30" height="30")
                             use(xlink:href="images/sprite.svg#arr-thin")
 
@@ -97,7 +98,93 @@ footer.footer
         .footer__bottom 2023 © GranFest Все права защищены.
 
 
+.modal
+    .modal__content
+        .modal__close-cross.modal__close
+        .modal__content-inner
 
+
+.modal__templates.hidden
+
+    .callback
+        .callback__modal
+            h2.modal__header Заказать в один клик
+
+            form.modal__form(id="callback-form" method="post")
+
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="name" placeholder="ФИО*" data-required)
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="phone" placeholder="Номер телефона *" data-required)
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="mail" placeholder="Электронная почта" )
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="comment" placeholder="Ваш комментарий" )
+
+                label.policy__checkbox
+                    input.policy__checkbox-input(type="checkbox")
+                    .policy__checkbox-square
+                        span.policy__checkbox-checkmark
+                    .policy__checkbox-text Я согласен с <a href="/policy.html" target="_blank">политикой обработки конфиденциальных данных</a>
+                    span.policy-err
+                .modal__submit-wrap
+                    input.modal__submit.modal__btn.btn.btn--blue(type="submit" value="Отправить данные")
+
+
+    .order
+        .order__modal
+            h2.modal__header Заказать в один клик
+
+            form.modal__form(id="order-form" method="post")
+
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="name" placeholder="ФИО*" data-required)
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="phone" placeholder="Номер телефона *" data-required)
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="mail" placeholder="Электронная почта" )
+                label.modal__input-wrap.input-wrap
+                    input.modal__input.inp(type="text" name="comment" placeholder="Ваш комментарий" )
+
+                label.policy__checkbox
+                    input.policy__checkbox-input(type="checkbox")
+                    .policy__checkbox-square
+                        span.policy__checkbox-checkmark
+                    .policy__checkbox-text Я согласен с <a href="/policy.html" target="_blank">политикой обработки конфиденциальных данных</a>
+                    span.policy-err
+                .modal__submit-wrap
+                    input.modal__submit.modal__btn.btn.btn--blue(type="submit" value="Отправить данные")
+
+
+
+
+
+    .thanksOrder
+        .thanksOrder__modal
+            img.modal__img(src="images/modal/green-check.png")
+            h2.modal__header Ваша заявка принята!
+            p.modal__text Менеджер магазина свяжется с вами в ближайшее время.
+            a.modal__btn.btn.btn--blue(href="/") На главную
+
+    .thanksCallback
+        .thanksCallback__modal
+            img.modal__img(src="images/modal/green-check.png")
+            h2.modal__header Ваш запрос принят!
+            p.modal__text Сотрудник компании ответит вам в ближайшее время
+            a.modal__btn.btn.btn--blue(href="/") На главную
+
+    .thanksSubscribe
+        .thanksSubscribe__modal
+            img.modal__img(src="images/modal/green-check.png")
+            h2.modal__header Спасибо, что остаетесь с нами!
+            p.modal__text Рассылка позволит Вам быть в курсе всех новостей и акций.
+            a.modal__btn.btn.btn--blue(href="/") На главную
+
+
+
+    a.thanksCallbackLink(data-modal="thanksCallback")
+    a.thanksOrderLink(data-modal="thanksOrder")
+    a.thanksSubscribeLink(data-modal="thanksSubscribe")
 
 
 

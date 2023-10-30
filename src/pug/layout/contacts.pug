@@ -1,0 +1,222 @@
+.breadcrumbs.wrapper 
+    a(href="../").breadcrumbs__item Главная 
+    span.breadcrumbs__divider /
+    a.breadcrumbs__item Контакты
+
+.contacts
+    .contacts__desktop 
+        .contacts__addresses.wrapper
+            .contacts__address-block
+                .contacts__address-top
+                    .contacts__address-name Оптовый отдел
+                    .contacts__address-text
+                        span 8 (800) 101-81-45
+                        span 8 (499) 964-60-41
+                        span пн. - пт. с 09:00 до 18:00
+                        <span class="underline"> info@granfest.net</span> (по вопросам сотрудничества)
+
+                .contacts__address-bottom
+                    a(href="") Стать дилером
+
+
+            .contacts__address-block
+                .contacts__address-top
+                    .contacts__address-name Розничный магазин
+                    .contacts__address-text
+                        span 8 (495) 778-69-77
+                        span 8 (926) 907-79-84
+                        span пн. - пт. с 09:00 до 18:00
+                        <span class="underline"> zakaz@granfest.net</span>
+
+                .contacts__address-bottom
+                    a(href="") Шоу-рум
+
+
+            .contacts__address-block
+                .contacts__address-top
+                    .contacts__address-name Сервисный отдел
+                    .contacts__address-text
+                        span 8 (495) 641-70-52
+                        span пн. - пт. с 09:00 до 18:00
+                        <span class="underline"> service@granfest.ru</span>
+
+                .contacts__address-bottom
+                    a(href="") Сервисные центры
+
+
+        .contacts__storage.wrapper
+            h2.section-title Склад готовой продукции
+            .contacts__storage-text 
+                p Адрес: Московская обл., Богородский городской округ, р.п. Обухово, Кудиновское ш., 4, территория "Атлант-Парк", склад №25.
+                p  пн.- пт. с 09:00 до 18.00; <br> сб с 9:00 до 15:00, вс - выходной
+                p GPS-координаты: широта: 55.8251650, долгота: 38.2591490 
+                p Действует пропускная система. Заказ пропуска за 3 часа до въезда.
+
+
+
+        .contacts__links.wrapper
+            .contacts__link
+                a.contacts__link-img
+                    img(src="images/contacts/map.png")
+                a.contacts__link-link
+                    svg(width="24" height="24")
+                        use(xlink:href="images/sprite.svg#download")
+                    span Скачать схему проезда
+
+            .contacts__link
+                a.contacts__link-img
+                    span Схема проезда youtube
+                a.contacts__link-link
+                    span Смотреть на YouTube
+                    svg(width="24" height="24")
+                        use(xlink:href="images/sprite.svg#basket-arr")
+
+
+        .contacts__map-block
+            .section-wrap.wrapper
+                h2.section-title Шоу-рум
+                span.section-subtitle Москва, ул. Золоторожский Вал, 8, ст. м. Площадь Ильича / ст. м. Римская
+
+            .contacts__map
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6608ccd1af694b9f77df2c8258c44bbc06410e2f9e3431e57a8a08751424a697&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+
+        .contacts__bottom
+            .section-wrap.wrapper
+                h2.section-title Есть вопросы?
+                span.section-subtitle Заполните форму. Наш специалист ответит на все вопросы о продукции и поможет подобрать оптимальное решение.
+
+            form.contacts__form.wrapper(method="post")
+                label.input-wrap
+                    span.inp-name Имя<span class="red">*</span>
+                    input.inp(type="text" name="name" placeholder="Васильев Андрей Николаевич" data-required)
+                label.input-wrap
+                    span.inp-name Номер телефона<span class="red">*</span>
+                    input.inp(type="text" name="name" placeholder="+7 (900) 000-00-00" data-required)
+                label.input-wrap
+                    span.inp-name E-mail
+                    input.inp(type="text" name="name" placeholder="Email@mail.ru")
+
+                input.btn.btn--blue.contacts__form-submit(type="submit"  value="Отправить") 
+
+
+
+    .contacts__mob.wrapper
+        .contacts__mob-content
+            .contacts__mob-section
+                .contacts__mob-section-name 
+                    span Оптовый отдел
+                    svg.close-mobSection(width="22" height="22")
+                        use(xlink:href="images/sprite.svg#arr-bold-r")
+
+                .contacts__mob-section-wrap
+                    .contacts__mob-section-inner
+                        .contacts__mob-section-content
+                            span 8 (800) 101-81-45
+                            span 8 (499) 964-60-41
+                            span пн. - пт. с 09:00 до 18:00
+                            span info@granfest.net (по вопросам сотрудничества)
+
+                            a.contacts__mob-section-link Стать дилером
+
+            .contacts__mob-section
+                .contacts__mob-section-name 
+                    span Розничный магазин
+                    svg.close-mobSection(width="22" height="22")
+                        use(xlink:href="images/sprite.svg#arr-bold-r")
+
+                .contacts__mob-section-wrap
+                    .contacts__mob-section-inner
+                        .contacts__mob-section-content
+                            span 8 (495) 778-69-77
+                            span 8 (926) 907-79-84 
+                            span пн. - пт. с 09:00 до 18:00
+                            span zakaz@granfest.net
+
+                            a.contacts__mob-section-link Шоу-рум
+
+                            
+            .contacts__mob-section
+                .contacts__mob-section-name 
+                    span Сервисный отдел
+                    svg.close-mobSection(width="22" height="22")
+                        use(xlink:href="images/sprite.svg#arr-bold-r")
+
+                .contacts__mob-section-wrap
+                    .contacts__mob-section-inner
+                        .contacts__mob-section-content
+                            span 8 (495) 641-70-52
+                            span пн. - пт. с 09:00 до 18:00
+                            span zakaz@granfest.net
+
+                            a.contacts__mob-section-link Сервисные центры
+
+            .contacts__mob-section
+                .contacts__mob-section-name 
+                    span Склад готовой продукции
+                    svg.close-mobSection(width="22" height="22")
+                        use(xlink:href="images/sprite.svg#arr-bold-r")
+
+                .contacts__mob-section-wrap
+                    .contacts__mob-section-inner
+                        .contacts__mob-section-content
+                            p Адрес: Московская обл., Богородский городской округ, р.п. Обухово, Кудиновское ш., 4, территория "Атлант-Парк", склад №25.
+                            p  пн.- пт. с 09:00 до 18.00; <br> сб с 9:00 до 15:00, вс - выходной
+                            p GPS-координаты: широта: 55.8251650, долгота: 38.2591490 
+                            p Действует пропускная система. Заказ пропуска за 3 часа до въезда.
+
+                            .contacts__links
+                                .contacts__link
+                                    a.contacts__link-img
+                                        img(src="images/contacts/map.png")
+                                    a.contacts__link-link
+                                        svg(width="24" height="24")
+                                            use(xlink:href="images/sprite.svg#download")
+                                        span Скачать схему проезда
+
+                                .contacts__link
+                                    a.contacts__link-img
+                                        span Схема проезда youtube
+                                    a.contacts__link-link
+                                        span Смотреть на YouTube
+                                        svg(width="24" height="24")
+                                            use(xlink:href="images/sprite.svg#basket-arr")
+
+
+            .contacts__mob-section
+                .contacts__mob-section-name 
+                    span Шоу-рум
+                    svg.close-mobSection(width="22" height="22")
+                        use(xlink:href="images/sprite.svg#arr-bold-r")
+
+                .contacts__mob-section-wrap
+                    .contacts__mob-section-inner
+                        .contacts__mob-section-content
+                            span Москва, ул. Золоторожский Вал, 8, ст. м. Площадь Ильича / ст. м. Римская
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6608ccd1af694b9f77df2c8258c44bbc06410e2f9e3431e57a8a08751424a697&amp;source=constructor" width="100%" height="250" frameborder="0"></iframe>
+
+
+
+
+            .contacts__mob-section
+                .contacts__mob-section-name 
+                    span Задать вопрос
+                    svg.close-mobSection(width="22" height="22")
+                        use(xlink:href="images/sprite.svg#arr-bold-r")
+
+                .contacts__mob-section-wrap
+                    .contacts__mob-section-inner
+                        .contacts__mob-section-content
+                            span Заполните форму. Наш специалист ответит на все вопросы о продукции и поможет подобрать оптимальное решение.
+                             form.contacts__mob-form(method="post")
+                                label.input-wrap
+                                    span.inp-name Ф.И.О.<span class="red">*</span>
+                                    input.inp(type="text" name="name" placeholder="Васильев Андрей Николаевич" data-required)
+                                label.input-wrap
+                                    span.inp-name Номер телефона<span class="red">*</span>
+                                    input.inp(type="text" name="name" placeholder="+7 (900) 000-00-00" data-required)
+                                label.input-wrap
+                                    span.inp-name E-mail
+                                    input.inp(type="text" name="name" placeholder="Email@mail.ru")
+
+                                input.btn.btn--blue.contacts__form-submit(type="submit"  value="Отправить") 
+

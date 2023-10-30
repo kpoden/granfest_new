@@ -54,10 +54,10 @@
                                 span ₽
 
                             .basket__item-actions
-                                a.basket__item-fav.basket__item-action
-                                    svg(width="15" height="16")
-                                        use(xlink:href="images/sprite.svg#heart")
-                                    span Добавить в избранное
+                                //- a.basket__item-fav.basket__item-action
+                                //-     svg(width="15" height="16")
+                                //-         use(xlink:href="images/sprite.svg#heart")
+                                //-     span Добавить в избранное
 
                                 a.basket__item-del.basket__item-action
                                     svg(width="15" height="16")
@@ -96,10 +96,10 @@
                                 span ₽
 
                             .basket__item-actions
-                                a.basket__item-fav.basket__item-action
-                                    svg(width="15" height="16")
-                                        use(xlink:href="images/sprite.svg#heart")
-                                    span Добавить в избранное
+                                //- a.basket__item-fav.basket__item-action
+                                //-     svg(width="15" height="16")
+                                //-         use(xlink:href="images/sprite.svg#heart")
+                                //-     span Добавить в избранное
 
                                 a.basket__item-del.basket__item-action
                                     svg(width="15" height="16")
@@ -138,10 +138,10 @@
                                 span ₽
 
                             .basket__item-actions
-                                a.basket__item-fav.basket__item-action
-                                    svg(width="15" height="16")
-                                        use(xlink:href="images/sprite.svg#heart")
-                                    span Добавить в избранное
+                                //- a.basket__item-fav.basket__item-action
+                                //-     svg(width="15" height="16")
+                                //-         use(xlink:href="images/sprite.svg#heart")
+                                //-     span Добавить в избранное
 
                                 a.basket__item-del.basket__item-action
                                     svg(width="15" height="16")
@@ -166,8 +166,8 @@
                                     span.inp-name Номер телефона<span class="red">*</span>
                                     input.inp(type="text" name="phone" placeholder="+7 (900) 000-00-00" data-required)
                                 label.input-wrap
-                                    span.inp-name E-mail<span class="red">*</span>
-                                    input.inp(type="text" name="email" placeholder="E-mail@mail.ru" data-required)
+                                    span.inp-name E-mail
+                                    input.inp(type="text" name="email" placeholder="E-mail@mail.ru")
 
 
                             .basket__contacts-block.urBlock(data-tab="Юридическое лицо")
@@ -198,7 +198,7 @@
                         .basket__address-blocks
                             .basket__address-block.activeBlock(data-tab="Самовывоз")
                                 label
-                                    input(type="radio", name="delivery")
+                                    input(type="radio", name="delivery" checked)
                                     .radio-circle
                                     span.basket__address-text Из шоурума (Москва, м. Площадь Ильича Золоторожский Вал, 8, ст. м. Площадь Ильича / ст. м. Римская")
 
@@ -275,4 +275,4 @@
             a.basket__total-checkout.first-step-btn.btn.btn--blue Перейти к оформлению
             a.basket__total-checkout.second-step-btn.hidden.btn.btn--blue К следующему этапу
             a.basket__total-checkout.third-step-btn.hidden.btn.btn--blue Перейти к оплате
-            a.basket__total-oneclick Купить в один клик
+            a.basket__total-oneclick(data-modal="order") Купить в один клик

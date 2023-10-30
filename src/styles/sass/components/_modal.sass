@@ -26,6 +26,7 @@
         width: fit-content
         min-width: 320px
         min-height: 480px
+        max-width: 740px
         margin: 20px auto
         top: 10%
         color: #1E2021
@@ -33,11 +34,8 @@
         border-radius: 24px
 
         +mw(800)
-            border-radius: 0
-            margin: 0
-            width: 100%
-            height: 100%
-            top: 0
+            min-height: 400px
+            max-width: 90%
 
 
 
@@ -48,7 +46,7 @@
 
     &__close-cross
         position: absolute
-        top: 70px
+        top: 40px
         right: 80px
         cursor: pointer
         width: 40px
@@ -78,6 +76,9 @@
             left: 50%
             transition: .2s
 
+            +mw(800)
+                width: 20px
+
             
 
         &::before
@@ -92,6 +93,9 @@
             left: 50%
             transition: .2s
 
+            +mw(800)
+                width: 20px
+
 
 
     &__content-inner
@@ -103,81 +107,24 @@
         
 
         +mw(1000)
-            padding: 50px 60px
+            padding: 50px 40px
 
-        +mw(1000)
+        +mw(800)
             padding: 50px 20px
 
     &__header
-        color: var(--c-blue)
-        font-family: HelveticaNeueCyr
-        font-size: 44px
-        font-style: normal
+        color: var(--c-font)
+        font-size: 36px
+        padding-bottom: 12px
         font-weight: 400
-        line-height: 100%
-        padding-bottom: 50px
         
         +mw(1000)
-            font-size: 32px
-            line-height: 42px
-            padding-bottom: 30px
+            font-size: 25px; 
 
         +mw(800)
-            font-size: 24px
-            font-weight: 400
-            line-height: 110%
-
-    &__text
-        font-family: HelveticaNeueCyr
-        font-size: 18px
-        font-style: normal
-        font-weight: 400
-        line-height: 120%
-
-        +mw(1000)
-            font-size: 16px
+            font-size: 20px; 
 
 
-    &__btn
-        min-width: 180px
-        text-align: center
-
-        
-        &:hover
-            color: #1E2021
-
-    &__submit-wrap
-        width: 100%
-
-        +mw(800)
-            position: absolute
-            bottom: 45px
-            padding: 0 20px
-
-    &__submit
-        width: 100%
-        padding: 20px 30px
-        border-radius: 8px
-        background: var(--c-blue)
-        color: #FFF
-        font-family: HelveticaNeueCyr
-        font-size: 24px
-        font-style: normal
-        font-weight: 400
-        line-height: 130%
-        letter-spacing: -0.24px
-        height: auto
-        margin-top: 50px
-
-        &:hover
-            background: #7790ff
-            color: #ffffff
-
-        +mw(800)
-            font-size: 16px
-            font-weight: 400
-            line-height: 120%
-            letter-spacing: 0.16px
 
 
         
@@ -189,134 +136,161 @@
         margin: 0 auto
 
     &__input-wrap
-        width: 100%
-        margin: 0 auto 25px
-        position: relative
+        padding-bottom: 12px
+        
 
         +mw(800)
-            margin: 0 auto 15px
+            padding-bottom: 0
 
     &__input
-        color: var(--c-font)
-        font-family: HelveticaNeueCyr
+        height: 54px
+        border-radius: 8px
+        background:#F5F5F5
+        border: 1px solid transparent
+        transition: .2s
+        color: rgba(0, 0, 0, 0.90)
         font-size: 24px
-        font-style: normal
-        font-weight: 400
-        line-height: 130%
-        letter-spacing: -0.24px
-        padding: 20px 30px
-        border-radius: 8px;
-        background:  #F5F5F5
-        width: 100%
+        padding: 0 30px
+
+        &:focus
+            border: 1px solid #12406e6b
 
         +mw(800)
             font-size: 14px
-            line-height: 130%
-            letter-spacing: -0.14px
-            padding: 15px
-
+            height: 35px
+            padding: 0 15px
         
 
         &::placeholder
             color: rgba(0, 0, 0, 0.60)
-            font-family: HelveticaNeueCyr
             font-size: 24px
-            font-style: normal
-            font-weight: 400
-            line-height: 130%
-            letter-spacing: -0.24px
 
             +mw(800)
                 font-size: 14px
-                line-height: 130%
-                letter-spacing: -0.14px
 
 
-    textarea
-        resize: none
-        height: 120px
+    &__submit-wrap
+        width: 100%
 
-
-    &__attach
-        
-        margin-right: auto
-        padding-top: 54px
-        cursor: pointer
-        display: flex
-        align-items: center
-        gap: 25px
-
-        +mw(800)
-            padding-top: 30px
-
-
-    &__attach-input
-        position: absolute
-        z-index: -1
-        opacity: 0
-        display: block
-        width: 0
-        height: 0
-
-    &__attach-title 
-        color: var(--c-blue)
-        font-family: HelveticaNeueCyr
-        font-size: 24px
-        font-weight: 400
-        line-height: 120%
-        letter-spacing: 0.24px
-        text-decoration: underline
+    &__btn
+        width: 100%
+        font-size: 20px
 
         +mw(800)
             font-size: 16px
-            font-style: normal
-            font-weight: 400
-            line-height: 120%
 
-
-    &__attach-text
-        font-size: 16px
-        color: var(--c-grey)
-        text-decoration: none
+    
 
 
 
 .callback__modal
-    width: 850px
 
     +mw(1300)
-        width: 600px
 
     +mw(800)
-        width: 100%
-        height: 100%
 
 
-.vacancy__modal
-    width: 850px
 
-    +mw(1300)
-        width: 600px
+.thanksCallback__modal,
+.thanksOrder__modal,
+.thanksSubscribe__modal
+    display: flex
+    flex-direction: column
+    align-items: center
+   
 
-    +mw(800)
-        width: 100%
-        height: 100%
+    .modal__img
+        margin: 0 auto
+        width: 60px
+        height: 60px
 
-.thanksVakancy__modal
     .modal__header
         padding-top: 40px
         text-align: center
+        font-size: 36px
+
+        +mw(800)
+            font-size: 20px
 
     .modal__text
         text-align: center
+        color: rgba(0, 0, 0, 0.60)
+        font-size: 24px
+        line-height: 130%
 
-.thanksCallback__modal
-    .modal__header
-        padding-top: 40px
-        text-align: center
+        +mw(800)
+            font-size: 14px
 
-    .modal__text
-        text-align: center
+    .modal__btn
+        margin-top: 80px
+
+        +mw(800)
+            margin-top: 35px
 
 
         
+.policy__checkbox
+    display: flex
+    margin-right: auto
+    align-items: center
+    gap: 22px
+    position: relative
+    margin-top: 8px
+    margin-bottom: 30px
+
+    +mw(800)
+        margin-top: 20px
+        gap: 10px
+
+.policy__checkbox-input
+    display: none
+
+.policy__checkbox-input:checked ~ .policy__checkbox-square .policy__checkbox-checkmark
+    display: block
+
+.policy__checkbox-checkmark
+    position: absolute
+    width: 12px
+    height: 20px
+    border-top: 4px solid var(--c-font)
+    border-left: 4px solid var(--c-font)
+    display: none
+    top: 40%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(-135deg)
+    caret-color: transparent;
+
+    +mw(800)
+        width: 8px
+        height: 14px
+        border-top: 2px solid var(--c-font)
+        border-left: 2px solid var(--c-font)
+
+
+.policy__checkbox-square
+    width: 26px
+    height: 26px
+    background: #fff
+    border: 1px solid var(--c-font)
+    position: relative
+    flex-shrink: 0
+
+    +mw(800)
+        width: 24px
+        height: 24px
+
+.policy__checkbox-text
+    font-size: 16px
+    font-style: normal
+    font-weight: 400
+    line-height: 130%
+
+    +mw(800)
+        font-size: 10px
+        font-weight: 400
+        line-height: 130%
+
+.policy-err
+    position: absolute
+    top: 30px
+    
