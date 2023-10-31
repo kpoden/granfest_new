@@ -85,18 +85,22 @@
                 h2.section-title Есть вопросы?
                 span.section-subtitle Заполните форму. Наш специалист ответит на все вопросы о продукции и поможет подобрать оптимальное решение.
 
-            form.contacts__form.wrapper(method="post")
+            form.contacts__form.wrapper(method="post" id="ask-form")
                 label.input-wrap
                     span.inp-name Имя<span class="red">*</span>
                     input.inp(type="text" name="name" placeholder="Васильев Андрей Николаевич" data-required)
                 label.input-wrap
                     span.inp-name Номер телефона<span class="red">*</span>
-                    input.inp(type="text" name="name" placeholder="+7 (900) 000-00-00" data-required)
+                    input.inp(type="text" name="phone" placeholder="+7 (900) 000-00-00" data-required)
                 label.input-wrap
                     span.inp-name E-mail
-                    input.inp(type="text" name="name" placeholder="Email@mail.ru")
+                    input.inp(type="text" name="email" placeholder="Email@mail.ru")
 
                 input.btn.btn--blue.contacts__form-submit(type="submit"  value="Отправить") 
+
+                label.input-wrap.textarea-wrap
+                    span.inp-name Введите вопрос<span class="red">*</span>
+                    textarea.inp(name="comment" placeholder="Ваш вопрос" data-required)
 
 
 
@@ -191,7 +195,7 @@
                 .contacts__mob-section-wrap
                     .contacts__mob-section-inner
                         .contacts__mob-section-content
-                            span Москва, ул. Золоторожский Вал, 8, ст. м. Площадь Ильича / ст. м. Римская
+                            span Москва, ул. Золоторожский Вал, 8, ст.м.&nbsp;Площадь Ильича / ст. м. Римская
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6608ccd1af694b9f77df2c8258c44bbc06410e2f9e3431e57a8a08751424a697&amp;source=constructor" width="100%" height="250" frameborder="0"></iframe>
 
 
@@ -207,16 +211,19 @@
                     .contacts__mob-section-inner
                         .contacts__mob-section-content
                             span Заполните форму. Наш специалист ответит на все вопросы о продукции и поможет подобрать оптимальное решение.
-                             form.contacts__mob-form(method="post")
+                             form.contacts__mob-form(method="post" id="ask-form-mob")
                                 label.input-wrap
                                     span.inp-name Ф.И.О.<span class="red">*</span>
                                     input.inp(type="text" name="name" placeholder="Васильев Андрей Николаевич" data-required)
                                 label.input-wrap
                                     span.inp-name Номер телефона<span class="red">*</span>
-                                    input.inp(type="text" name="name" placeholder="+7 (900) 000-00-00" data-required)
+                                    input.inp(type="text" name="phone" placeholder="+7 (900) 000-00-00" data-required)
                                 label.input-wrap
                                     span.inp-name E-mail
-                                    input.inp(type="text" name="name" placeholder="Email@mail.ru")
+                                    input.inp(type="text" name="email" placeholder="Email@mail.ru")
+                                label.input-wrap.textarea-wrap
+                                    span.inp-name Введите вопрос
+                                    textarea.inp(name="comment" placeholder="Ваш вопрос" data-required)
 
                                 input.btn.btn--blue.contacts__form-submit(type="submit"  value="Отправить") 
 

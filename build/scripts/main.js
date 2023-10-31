@@ -1208,7 +1208,7 @@ class Form {
       });
   
   
-      const inputs = this.form.querySelectorAll('input[type=text], input[type=tel], input[type=password]');
+      const inputs = this.form.querySelectorAll('input[type=text], input[type=tel], input[type=password], textarea');
       inputs.forEach((input) => {
         input.classList.remove('_error-input');
       });
@@ -1250,13 +1250,15 @@ class Form {
               errorArr.push(el);
           }
       })
+      console.log(errorArr);
 
       if(errorArr.length > 0) {
-      this.createError(errorArr);
+        this.createError(errorArr);
       
-      return false;
+        return false;
       } else {
-      return true;
+        this.deleteErrors();
+        return true;
       }
 
   }
@@ -1280,7 +1282,8 @@ class Form {
   }
 
   validateEmail() {
-      const emailInput = this.form.querySelector('input[name=email]');
+      const emailInput = this.form.querySelector('input[name="email"][data-required]');
+      if(emailInput) {
       const email = emailInput.value;
       const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       let validEmail = emailPattern.test(email);
@@ -1297,15 +1300,26 @@ class Form {
       } else {
           return true;
       }
+    } else {
+      return true;
+    }
   }
 
   createSuccsessMsg() {
 
       if(this.form.id == 'order-form') {
           document.querySelector('.thanksOrderLink').click();
-      } if(this.form.id == 'callback-form') {
+      } 
+      
+      if(this.form.id == 'ask-form') {
           document.querySelector('.thanksCallbackLink').click();
-      } if(this.form.id == 'subscribe-form') {
+      } 
+
+      if(this.form.id == 'ask-form-mob') {
+        document.querySelector('.thanksCallbackLink').click();
+    } 
+      
+      if(this.form.id == 'subscribe-form') {
           document.querySelector('.thanksSubscribeLink').click();
       }
   }
@@ -1320,12 +1334,13 @@ class Form {
               return;
             }
 
-          if(this.form.id !=='subscribe-form'){
+          if(this.form.id !=='subscribe-form' && this.form.id !=='ask-form' && this.form.id !=='ask-form-mob'){
 
             if(!this.policyChecked()) {
               return;
             }
           } else {
+            
             if(!this.validateEmail()) {
               return;
             }
@@ -1383,6 +1398,16 @@ class Form {
   }
 }
 
+function  formsInit() {
+  const forms = document.querySelectorAll('form');
+
+  forms.forEach(el=>{
+    if(el.hasAttribute('id')) {
+      const form = new Form(el.id);
+    }
+  })
+}
+formsInit()
 
 function subscribeHandle() {
   const subscribeBtns = document.querySelectorAll('.footer__subscribe-btn');
