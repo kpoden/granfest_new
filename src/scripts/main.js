@@ -345,7 +345,7 @@ function headerFiltersListen() {
           container.style.overflow = "";
 
           
-          // bodyLock(false);
+          bodyLock(false);
           
         })
 
@@ -357,7 +357,7 @@ function headerFiltersListen() {
           mmf.classList.remove('hidden');
           container.style.height = '';
           container.style.overflow = "";
-          // bodyLock(false);
+          bodyLock(false);
           overlay.classList.remove('activeOverlay');
         })
 
@@ -1422,6 +1422,26 @@ function subscribeHandle() {
 subscribeHandle()
 
 
+
+function searchInputsInit() {
+  const searchInputs = document.querySelectorAll('.search-input');
+
+  searchInputs.forEach(input => {
+    const searchWrap = input.parentNode.parentNode;
+    const searchResults = searchWrap.querySelector('.search-results');
+
+    input.addEventListener('focus', ()=>{
+      searchResults.style.display = "block";
+    })
+
+    input.addEventListener('blur', ()=>{
+      searchResults.style.display = "none";
+    })
+  })
+
+}
+
+searchInputsInit()
 
 
 });
